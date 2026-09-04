@@ -1,0 +1,6890 @@
+[
+  {
+    "customer_id": "CUST_001",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:55"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Shell Station",
+        "amount": 50.8,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "12:10"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Union Mortgage",
+        "amount": 1436.12,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "15:01"
+      },
+      {
+        "date": "2024-01-05",
+        "payee": "Corner Pharmacy",
+        "amount": 34.47,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "11:31"
+      },
+      {
+        "date": "2024-01-06",
+        "payee": "Riverside Electric",
+        "amount": 121.76,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "10:50"
+      },
+      {
+        "date": "2024-01-10",
+        "payee": "Whole Foods",
+        "amount": 76.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "14:45"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Metro Water",
+        "amount": 48.07,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "08:41"
+      },
+      {
+        "date": "2024-01-13",
+        "payee": "Netflix",
+        "amount": 16.2,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "20:01"
+      },
+      {
+        "date": "2024-01-15",
+        "payee": "Whole Foods",
+        "amount": 98.89,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "16:16"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Shell Station",
+        "amount": 61.9,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "14:18"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:01"
+      },
+      {
+        "date": "2024-01-23",
+        "payee": "Whole Foods",
+        "amount": 86.71,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "17:34"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:37"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Union Mortgage",
+        "amount": 1455.73,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "11:37"
+      },
+      {
+        "date": "2024-02-04",
+        "payee": "Corner Pharmacy",
+        "amount": 33.6,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "12:53"
+      },
+      {
+        "date": "2024-02-06",
+        "payee": "Riverside Electric",
+        "amount": 128.12,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "08:28"
+      },
+      {
+        "date": "2024-02-08",
+        "payee": "Shell Station",
+        "amount": 55.03,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "08:44"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Shell Station",
+        "amount": 49.81,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "08:21"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Metro Water",
+        "amount": 47.0,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "09:46"
+      },
+      {
+        "date": "2024-02-13",
+        "payee": "Netflix",
+        "amount": 16.41,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "12:46"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:19"
+      },
+      {
+        "date": "2024-02-18",
+        "payee": "Whole Foods",
+        "amount": 89.83,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "11:22"
+      },
+      {
+        "date": "2024-02-20",
+        "payee": "Whole Foods",
+        "amount": 100.9,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "14:18"
+      },
+      {
+        "date": "2024-02-27",
+        "payee": "Whole Foods",
+        "amount": 62.97,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "19:02"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:05"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Union Mortgage",
+        "amount": 1491.28,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "11:27"
+      },
+      {
+        "date": "2024-03-05",
+        "payee": "Corner Pharmacy",
+        "amount": 33.41,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "11:41"
+      },
+      {
+        "date": "2024-03-06",
+        "payee": "Riverside Electric",
+        "amount": 124.06,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "15:19"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "Whole Foods",
+        "amount": 63.49,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "14:59"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Metro Water",
+        "amount": 47.24,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "14:10"
+      },
+      {
+        "date": "2024-03-13",
+        "payee": "Netflix",
+        "amount": 16.15,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "14:05"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:51"
+      },
+      {
+        "date": "2024-03-17",
+        "payee": "Shell Station",
+        "amount": 48.51,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "21:26"
+      },
+      {
+        "date": "2024-03-22",
+        "payee": "Whole Foods",
+        "amount": 97.66,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "11:10"
+      },
+      {
+        "date": "2024-03-26",
+        "payee": "Shell Station",
+        "amount": 54.33,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "13:14"
+      },
+      {
+        "date": "2024-03-27",
+        "payee": "Whole Foods",
+        "amount": 63.08,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "20:55"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:59"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Union Mortgage",
+        "amount": 1422.51,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "18:18"
+      },
+      {
+        "date": "2024-04-05",
+        "payee": "Whole Foods",
+        "amount": 88.58,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "20:10"
+      },
+      {
+        "date": "2024-04-06",
+        "payee": "Riverside Electric",
+        "amount": 122.98,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "11:33"
+      },
+      {
+        "date": "2024-04-08",
+        "payee": "Whole Foods",
+        "amount": 72.06,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "19:49"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Metro Water",
+        "amount": 48.99,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "13:11"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Shell Station",
+        "amount": 48.56,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "16:36"
+      },
+      {
+        "date": "2024-04-13",
+        "payee": "Netflix",
+        "amount": 16.26,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "09:45"
+      },
+      {
+        "date": "2024-04-15",
+        "payee": "Corner Pharmacy",
+        "amount": 36.73,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "20:16"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:08"
+      },
+      {
+        "date": "2024-04-22",
+        "payee": "Whole Foods",
+        "amount": 95.77,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "14:13"
+      },
+      {
+        "date": "2024-04-24",
+        "payee": "Shell Station",
+        "amount": 52.97,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "11:18"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:27"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Union Mortgage",
+        "amount": 1469.3,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "15:12"
+      },
+      {
+        "date": "2024-05-06",
+        "payee": "Riverside Electric",
+        "amount": 128.69,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "15:43"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "Shell Station",
+        "amount": 49.21,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "09:59"
+      },
+      {
+        "date": "2024-05-11",
+        "payee": "Metro Water",
+        "amount": 48.89,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "20:51"
+      },
+      {
+        "date": "2024-05-13",
+        "payee": "Netflix",
+        "amount": 15.81,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "09:20"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Whole Foods",
+        "amount": 88.5,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "10:59"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Northwind Systems",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:48"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Whole Foods",
+        "amount": 63.17,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "18:55"
+      },
+      {
+        "date": "2024-05-23",
+        "payee": "Whole Foods",
+        "amount": 104.04,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Grocery Shopping",
+        "timestamp": "11:24"
+      },
+      {
+        "date": "2024-05-27",
+        "payee": "Corner Pharmacy",
+        "amount": 33.26,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "12:01"
+      },
+      {
+        "date": "2024-05-28",
+        "payee": "Shell Station",
+        "amount": 55.42,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "13:25"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_002",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-03",
+        "payee": "Harbour Business Park",
+        "amount": 2142.91,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Commercial Rent",
+        "timestamp": "11:22"
+      },
+      {
+        "date": "2024-01-04",
+        "payee": "Sterling Supply Co",
+        "amount": 1195.96,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "13:19"
+      },
+      {
+        "date": "2024-01-05",
+        "payee": "Aldridge Client Corp",
+        "amount": 5262.32,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "17:29"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Utilities Business",
+        "amount": 457.75,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "15:35"
+      },
+      {
+        "date": "2024-01-17",
+        "payee": "Office Depot",
+        "amount": 300.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "21:10"
+      },
+      {
+        "date": "2024-01-19",
+        "payee": "Bellamy Client Inc",
+        "amount": 7201.5,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "16:17"
+      },
+      {
+        "date": "2024-01-24",
+        "payee": "Office Depot",
+        "amount": 288.64,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "15:42"
+      },
+      {
+        "date": "2024-01-27",
+        "payee": "Sterling Supply Co",
+        "amount": 1152.13,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "19:06"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Harbour Business Park",
+        "amount": 2154.15,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Commercial Rent",
+        "timestamp": "19:00"
+      },
+      {
+        "date": "2024-02-04",
+        "payee": "Sterling Supply Co",
+        "amount": 1170.3,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "09:44"
+      },
+      {
+        "date": "2024-02-04",
+        "payee": "Office Depot",
+        "amount": 350.19,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "17:34"
+      },
+      {
+        "date": "2024-02-05",
+        "payee": "Aldridge Client Corp",
+        "amount": 5045.03,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "12:03"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Utilities Business",
+        "amount": 440.1,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "18:27"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Sterling Supply Co",
+        "amount": 989.51,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "20:42"
+      },
+      {
+        "date": "2024-02-19",
+        "payee": "Bellamy Client Inc",
+        "amount": 7100.76,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "15:01"
+      },
+      {
+        "date": "2024-02-27",
+        "payee": "Office Depot",
+        "amount": 239.4,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "16:56"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Harbour Business Park",
+        "amount": 2152.72,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Commercial Rent",
+        "timestamp": "09:54"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Sterling Supply Co",
+        "amount": 1198.43,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "20:01"
+      },
+      {
+        "date": "2024-03-05",
+        "payee": "Aldridge Client Corp",
+        "amount": 5201.01,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "18:20"
+      },
+      {
+        "date": "2024-03-06",
+        "payee": "Office Depot",
+        "amount": 308.66,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "15:52"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Utilities Business",
+        "amount": 455.98,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "21:35"
+      },
+      {
+        "date": "2024-03-15",
+        "payee": "Office Depot",
+        "amount": 284.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "11:49"
+      },
+      {
+        "date": "2024-03-19",
+        "payee": "Bellamy Client Inc",
+        "amount": 7085.66,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "08:16"
+      },
+      {
+        "date": "2024-03-28",
+        "payee": "Sterling Supply Co",
+        "amount": 1491.8,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "15:17"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Office Depot",
+        "amount": 371.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "17:27"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Harbour Business Park",
+        "amount": 2156.62,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Commercial Rent",
+        "timestamp": "21:40"
+      },
+      {
+        "date": "2024-04-04",
+        "payee": "Sterling Supply Co",
+        "amount": 1214.08,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "15:47"
+      },
+      {
+        "date": "2024-04-05",
+        "payee": "Aldridge Client Corp",
+        "amount": 5007.28,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "12:04"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Utilities Business",
+        "amount": 446.98,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "19:53"
+      },
+      {
+        "date": "2024-04-19",
+        "payee": "Bellamy Client Inc",
+        "amount": 7125.38,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "15:49"
+      },
+      {
+        "date": "2024-04-20",
+        "payee": "Sterling Supply Co",
+        "amount": 1147.11,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "21:11"
+      },
+      {
+        "date": "2024-04-29",
+        "payee": "Office Depot",
+        "amount": 288.08,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "17:17"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Harbour Business Park",
+        "amount": 2156.56,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Commercial Rent",
+        "timestamp": "08:32"
+      },
+      {
+        "date": "2024-05-04",
+        "payee": "Office Depot",
+        "amount": 372.86,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "12:16"
+      },
+      {
+        "date": "2024-05-04",
+        "payee": "Sterling Supply Co",
+        "amount": 1184.58,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "16:48"
+      },
+      {
+        "date": "2024-05-05",
+        "payee": "Aldridge Client Corp",
+        "amount": 4873.41,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "10:40"
+      },
+      {
+        "date": "2024-05-11",
+        "payee": "Utilities Business",
+        "amount": 456.25,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Utility Bill",
+        "timestamp": "14:49"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Sterling Supply Co",
+        "amount": 1462.03,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Inventory Purchase",
+        "timestamp": "09:38"
+      },
+      {
+        "date": "2024-05-19",
+        "payee": "Bellamy Client Inc",
+        "amount": 7683.23,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Invoice Payment",
+        "timestamp": "18:50"
+      },
+      {
+        "date": "2024-05-29",
+        "payee": "Office Depot",
+        "amount": 189.87,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Office Supplies",
+        "timestamp": "10:49"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_003",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:58"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Greenway Apartments",
+        "amount": 1332.12,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "16:29"
+      },
+      {
+        "date": "2024-01-10",
+        "payee": "City Power",
+        "amount": 137.91,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "15:02"
+      },
+      {
+        "date": "2024-01-13",
+        "payee": "Chevron",
+        "amount": 49.55,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "17:48"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:46"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Safeway",
+        "amount": 92.45,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:51"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Chevron",
+        "amount": 53.17,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "11:03"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Netflix",
+        "amount": 16.72,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "11:26"
+      },
+      {
+        "date": "2024-01-23",
+        "payee": "Safeway",
+        "amount": 94.88,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "08:15"
+      },
+      {
+        "date": "2024-01-27",
+        "payee": "Safeway",
+        "amount": 66.67,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "12:04"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:41"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Chevron",
+        "amount": 48.56,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "17:56"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Safeway",
+        "amount": 89.41,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "16:45"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Greenway Apartments",
+        "amount": 1321.77,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "21:03"
+      },
+      {
+        "date": "2024-02-10",
+        "payee": "City Power",
+        "amount": 141.68,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "13:02"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Safeway",
+        "amount": 60.41,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "12:29"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:24"
+      },
+      {
+        "date": "2024-02-20",
+        "payee": "Chevron",
+        "amount": 52.83,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "13:04"
+      },
+      {
+        "date": "2024-02-22",
+        "payee": "Netflix",
+        "amount": 16.68,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "16:32"
+      },
+      {
+        "date": "2024-02-27",
+        "payee": "Safeway",
+        "amount": 91.12,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:10"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:18"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Greenway Apartments",
+        "amount": 1303.65,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "13:23"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Safeway",
+        "amount": 76.46,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:01"
+      },
+      {
+        "date": "2024-03-07",
+        "payee": "Safeway",
+        "amount": 70.37,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:47"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "Chevron",
+        "amount": 44.57,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "10:02"
+      },
+      {
+        "date": "2024-03-10",
+        "payee": "City Power",
+        "amount": 140.89,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "12:08"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Chevron",
+        "amount": 49.07,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "18:16"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:38"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Safeway",
+        "amount": 67.34,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:58"
+      },
+      {
+        "date": "2024-03-22",
+        "payee": "Netflix",
+        "amount": 17.48,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "12:59"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:11"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Greenway Apartments",
+        "amount": 1318.6,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "14:47"
+      },
+      {
+        "date": "2024-04-06",
+        "payee": "Safeway",
+        "amount": 65.56,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "09:29"
+      },
+      {
+        "date": "2024-04-08",
+        "payee": "Chevron",
+        "amount": 41.42,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "20:49"
+      },
+      {
+        "date": "2024-04-10",
+        "payee": "City Power",
+        "amount": 142.22,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "11:37"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:12"
+      },
+      {
+        "date": "2024-04-20",
+        "payee": "Safeway",
+        "amount": 84.25,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:55"
+      },
+      {
+        "date": "2024-04-22",
+        "payee": "Netflix",
+        "amount": 17.41,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "18:26"
+      },
+      {
+        "date": "2024-04-25",
+        "payee": "Safeway",
+        "amount": 73.45,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:04"
+      },
+      {
+        "date": "2024-04-28",
+        "payee": "Chevron",
+        "amount": 50.49,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "15:41"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:52"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Greenway Apartments",
+        "amount": 1333.89,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "17:33"
+      },
+      {
+        "date": "2024-05-05",
+        "payee": "Safeway",
+        "amount": 73.14,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:24"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "Chevron",
+        "amount": 48.32,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "09:24"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "City Power",
+        "amount": 139.11,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "15:16"
+      },
+      {
+        "date": "2024-05-12",
+        "payee": "CryptoExchange XYZ",
+        "amount": 2500.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Outgoing Wire Transfer",
+        "timestamp": "17:32"
+      },
+      {
+        "date": "2024-05-12",
+        "payee": "Safeway",
+        "amount": 60.46,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:28"
+      },
+      {
+        "date": "2024-05-13",
+        "payee": "CryptoExchange XYZ",
+        "amount": 1500.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Outgoing Wire Transfer",
+        "timestamp": "11:40"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "CryptoExchange XYZ",
+        "amount": 1000.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Outgoing Wire Transfer",
+        "timestamp": "09:18"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Acme Manufacturing",
+        "amount": 4000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:12"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Safeway",
+        "amount": 75.26,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:42"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Netflix",
+        "amount": 16.8,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "20:24"
+      },
+      {
+        "date": "2024-05-24",
+        "payee": "Chevron",
+        "amount": 44.45,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "14:41"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_004",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-03",
+        "payee": "Lakeside Rentals",
+        "amount": 1685.62,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "16:04"
+      },
+      {
+        "date": "2024-01-05",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:23"
+      },
+      {
+        "date": "2024-01-09",
+        "payee": "City Power",
+        "amount": 116.4,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "11:19"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Walmart",
+        "amount": 118.89,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "16:35"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Walmart",
+        "amount": 96.23,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "19:03"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Shell Station",
+        "amount": 49.08,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "10:37"
+      },
+      {
+        "date": "2024-01-17",
+        "payee": "Shell Station",
+        "amount": 49.06,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "12:49"
+      },
+      {
+        "date": "2024-01-19",
+        "payee": "Walmart",
+        "amount": 70.11,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "19:52"
+      },
+      {
+        "date": "2024-01-20",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "11:58"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Lakeside Rentals",
+        "amount": 1611.36,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "16:22"
+      },
+      {
+        "date": "2024-02-05",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:28"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "City Power",
+        "amount": 117.84,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "09:35"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "Walmart",
+        "amount": 115.39,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "17:36"
+      },
+      {
+        "date": "2024-02-15",
+        "payee": "Shell Station",
+        "amount": 63.92,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "11:24"
+      },
+      {
+        "date": "2024-02-15",
+        "payee": "Walmart",
+        "amount": 87.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "21:13"
+      },
+      {
+        "date": "2024-02-20",
+        "payee": "Walmart",
+        "amount": 125.0,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "09:15"
+      },
+      {
+        "date": "2024-02-20",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:31"
+      },
+      {
+        "date": "2024-02-24",
+        "payee": "Shell Station",
+        "amount": 46.57,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "21:29"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Lakeside Rentals",
+        "amount": 1628.77,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "09:29"
+      },
+      {
+        "date": "2024-03-05",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:24"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "City Power",
+        "amount": 115.63,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "08:02"
+      },
+      {
+        "date": "2024-03-15",
+        "payee": "Walmart",
+        "amount": 102.27,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "15:53"
+      },
+      {
+        "date": "2024-03-15",
+        "payee": "Shell Station",
+        "amount": 63.48,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "20:10"
+      },
+      {
+        "date": "2024-03-20",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:09"
+      },
+      {
+        "date": "2024-03-25",
+        "payee": "Walmart",
+        "amount": 88.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "15:53"
+      },
+      {
+        "date": "2024-03-28",
+        "payee": "Walmart",
+        "amount": 113.71,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "17:08"
+      },
+      {
+        "date": "2024-03-28",
+        "payee": "Shell Station",
+        "amount": 55.98,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "18:13"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Lakeside Rentals",
+        "amount": 1698.81,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "15:45"
+      },
+      {
+        "date": "2024-04-05",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:24"
+      },
+      {
+        "date": "2024-04-05",
+        "payee": "Walmart",
+        "amount": 103.62,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "13:41"
+      },
+      {
+        "date": "2024-04-07",
+        "payee": "Walmart",
+        "amount": 124.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "18:47"
+      },
+      {
+        "date": "2024-04-09",
+        "payee": "City Power",
+        "amount": 116.06,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "14:42"
+      },
+      {
+        "date": "2024-04-20",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "10:37"
+      },
+      {
+        "date": "2024-04-21",
+        "payee": "Walmart",
+        "amount": 118.95,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "08:25"
+      },
+      {
+        "date": "2024-04-21",
+        "payee": "Shell Station",
+        "amount": 52.16,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "11:32"
+      },
+      {
+        "date": "2024-04-23",
+        "payee": "Shell Station",
+        "amount": 44.52,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "10:00"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Lakeside Rentals",
+        "amount": 1625.77,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "09:09"
+      },
+      {
+        "date": "2024-05-04",
+        "payee": "Shell Station",
+        "amount": 54.05,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "17:58"
+      },
+      {
+        "date": "2024-05-05",
+        "payee": "Shell Station",
+        "amount": 46.57,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "17:27"
+      },
+      {
+        "date": "2024-05-05",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:11"
+      },
+      {
+        "date": "2024-05-07",
+        "payee": "Walmart",
+        "amount": 87.44,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "08:06"
+      },
+      {
+        "date": "2024-05-07",
+        "payee": "Walmart",
+        "amount": 76.29,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "16:59"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "City Power",
+        "amount": 114.94,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "12:46"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "Walmart",
+        "amount": 121.62,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "09:32"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Meridian Overseas Bank",
+        "amount": 12000.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "International Wire Transfer",
+        "timestamp": "15:11"
+      },
+      {
+        "date": "2024-05-20",
+        "payee": "Vertex Technologies",
+        "amount": 5000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:09"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_005",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-05",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:56"
+      },
+      {
+        "date": "2024-01-12",
+        "payee": "Trader Joes",
+        "amount": 138.24,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "17:19"
+      },
+      {
+        "date": "2024-01-14",
+        "payee": "Ashford Property Mgmt",
+        "amount": 1976.82,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Rent Payment",
+        "timestamp": "21:32"
+      },
+      {
+        "date": "2024-01-18",
+        "payee": "Trader Joes",
+        "amount": 108.46,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "14:32"
+      },
+      {
+        "date": "2024-01-20",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:37"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Fairmont Brokerage",
+        "amount": 4945.36,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Scheduled Investment Transfer",
+        "timestamp": "19:41"
+      },
+      {
+        "date": "2024-02-05",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:44"
+      },
+      {
+        "date": "2024-02-13",
+        "payee": "Trader Joes",
+        "amount": 106.03,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "17:09"
+      },
+      {
+        "date": "2024-02-14",
+        "payee": "Ashford Property Mgmt",
+        "amount": 1993.0,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Rent Payment",
+        "timestamp": "08:25"
+      },
+      {
+        "date": "2024-02-20",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:24"
+      },
+      {
+        "date": "2024-02-22",
+        "payee": "Fairmont Brokerage",
+        "amount": 4982.9,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Scheduled Investment Transfer",
+        "timestamp": "13:46"
+      },
+      {
+        "date": "2024-02-27",
+        "payee": "Trader Joes",
+        "amount": 113.29,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:52"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Trader Joes",
+        "amount": 119.46,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "11:17"
+      },
+      {
+        "date": "2024-03-05",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:44"
+      },
+      {
+        "date": "2024-03-14",
+        "payee": "Ashford Property Mgmt",
+        "amount": 2052.91,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Rent Payment",
+        "timestamp": "09:05"
+      },
+      {
+        "date": "2024-03-17",
+        "payee": "Trader Joes",
+        "amount": 134.42,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:00"
+      },
+      {
+        "date": "2024-03-20",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:47"
+      },
+      {
+        "date": "2024-03-22",
+        "payee": "Fairmont Brokerage",
+        "amount": 5100.84,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Scheduled Investment Transfer",
+        "timestamp": "17:03"
+      },
+      {
+        "date": "2024-04-05",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:06"
+      },
+      {
+        "date": "2024-04-13",
+        "payee": "Trader Joes",
+        "amount": 108.28,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "18:51"
+      },
+      {
+        "date": "2024-04-14",
+        "payee": "Ashford Property Mgmt",
+        "amount": 1961.39,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Rent Payment",
+        "timestamp": "20:08"
+      },
+      {
+        "date": "2024-04-17",
+        "payee": "Trader Joes",
+        "amount": 110.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:09"
+      },
+      {
+        "date": "2024-04-20",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:54"
+      },
+      {
+        "date": "2024-04-22",
+        "payee": "Fairmont Brokerage",
+        "amount": 4910.8,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Scheduled Investment Transfer",
+        "timestamp": "16:44"
+      },
+      {
+        "date": "2024-05-05",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:11"
+      },
+      {
+        "date": "2024-05-08",
+        "payee": "Trader Joes",
+        "amount": 111.23,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:02"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "Ashford Property Mgmt",
+        "amount": 2008.27,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Rent Payment",
+        "timestamp": "17:56"
+      },
+      {
+        "date": "2024-05-20",
+        "payee": "Halden Finance",
+        "amount": 6000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:09"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Fairmont Brokerage",
+        "amount": 4856.8,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Scheduled Investment Transfer",
+        "timestamp": "18:59"
+      },
+      {
+        "date": "2024-05-25",
+        "payee": "Trader Joes",
+        "amount": 98.53,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:58"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_006",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Daily Grind Coffee",
+        "amount": 7.0,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "11:28"
+      },
+      {
+        "date": "2024-01-02",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:53"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Brookline Apartments",
+        "amount": 1155.56,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "11:56"
+      },
+      {
+        "date": "2024-01-12",
+        "payee": "Anytime Fitness",
+        "amount": 50.83,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "17:39"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:34"
+      },
+      {
+        "date": "2024-01-21",
+        "payee": "Daily Grind Coffee",
+        "amount": 4.81,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "09:47"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Daily Grind Coffee",
+        "amount": 4.86,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "15:37"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Kroger",
+        "amount": 77.11,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:31"
+      },
+      {
+        "date": "2024-01-27",
+        "payee": "Kroger",
+        "amount": 66.68,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:36"
+      },
+      {
+        "date": "2024-01-28",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.72,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "11:37"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "10:33"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Brookline Apartments",
+        "amount": 1143.42,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "21:58"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.52,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "12:55"
+      },
+      {
+        "date": "2024-02-12",
+        "payee": "Anytime Fitness",
+        "amount": 49.06,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "13:24"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:23"
+      },
+      {
+        "date": "2024-02-18",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.14,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "12:17"
+      },
+      {
+        "date": "2024-02-21",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.97,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "15:55"
+      },
+      {
+        "date": "2024-02-23",
+        "payee": "Kroger",
+        "amount": 57.88,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "18:03"
+      },
+      {
+        "date": "2024-02-25",
+        "payee": "Kroger",
+        "amount": 65.91,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:58"
+      },
+      {
+        "date": "2024-02-28",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.82,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "20:33"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:04"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Daily Grind Coffee",
+        "amount": 4.66,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "19:11"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Brookline Apartments",
+        "amount": 1178.22,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "11:08"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Daily Grind Coffee",
+        "amount": 4.68,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "21:52"
+      },
+      {
+        "date": "2024-03-12",
+        "payee": "Anytime Fitness",
+        "amount": 49.38,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "21:30"
+      },
+      {
+        "date": "2024-03-14",
+        "payee": "Daily Grind Coffee",
+        "amount": 4.84,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "15:11"
+      },
+      {
+        "date": "2024-03-14",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.66,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "21:44"
+      },
+      {
+        "date": "2024-03-15",
+        "payee": "Kroger",
+        "amount": 62.69,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:03"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:08"
+      },
+      {
+        "date": "2024-03-23",
+        "payee": "Kroger",
+        "amount": 77.14,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "08:24"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:28"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Brookline Apartments",
+        "amount": 1142.85,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "21:47"
+      },
+      {
+        "date": "2024-04-07",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.51,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "11:32"
+      },
+      {
+        "date": "2024-04-12",
+        "payee": "Anytime Fitness",
+        "amount": 50.5,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "15:22"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "10:12"
+      },
+      {
+        "date": "2024-04-17",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.52,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "08:58"
+      },
+      {
+        "date": "2024-04-19",
+        "payee": "Kroger",
+        "amount": 76.4,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:20"
+      },
+      {
+        "date": "2024-04-23",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.12,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "20:12"
+      },
+      {
+        "date": "2024-04-27",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "17:44"
+      },
+      {
+        "date": "2024-04-28",
+        "payee": "Kroger",
+        "amount": 75.78,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "18:36"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:57"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Brookline Apartments",
+        "amount": 1132.16,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "16:04"
+      },
+      {
+        "date": "2024-05-05",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.29,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "16:04"
+      },
+      {
+        "date": "2024-05-12",
+        "payee": "Anytime Fitness",
+        "amount": 48.97,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "12:57"
+      },
+      {
+        "date": "2024-05-12",
+        "payee": "Kroger",
+        "amount": 62.99,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:59"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "18:11"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Cordell Corp",
+        "amount": 3200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:46"
+      },
+      {
+        "date": "2024-05-20",
+        "payee": "Kroger",
+        "amount": 75.87,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:05"
+      },
+      {
+        "date": "2024-05-23",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.33,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "16:20"
+      },
+      {
+        "date": "2024-05-29",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.15,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "15:31"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_007",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:36"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Parkview Leasing",
+        "amount": 1363.48,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "20:57"
+      },
+      {
+        "date": "2024-01-09",
+        "payee": "City Power",
+        "amount": 147.84,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "20:44"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Target",
+        "amount": 99.61,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "10:38"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Target",
+        "amount": 113.5,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "15:25"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Target",
+        "amount": 96.9,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "10:06"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:58"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "11:42"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Parkview Leasing",
+        "amount": 1436.28,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "20:17"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "City Power",
+        "amount": 145.9,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "13:40"
+      },
+      {
+        "date": "2024-02-15",
+        "payee": "Target",
+        "amount": 88.47,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "15:34"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:44"
+      },
+      {
+        "date": "2024-02-24",
+        "payee": "Target",
+        "amount": 123.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "13:28"
+      },
+      {
+        "date": "2024-02-27",
+        "payee": "Target",
+        "amount": 100.85,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "18:27"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:48"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Parkview Leasing",
+        "amount": 1423.6,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "12:39"
+      },
+      {
+        "date": "2024-03-07",
+        "payee": "Target",
+        "amount": 93.86,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "17:57"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "City Power",
+        "amount": 148.46,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "20:53"
+      },
+      {
+        "date": "2024-03-14",
+        "payee": "Target",
+        "amount": 113.05,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "15:51"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:35"
+      },
+      {
+        "date": "2024-03-20",
+        "payee": "Target",
+        "amount": 101.22,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "09:12"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:29"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Parkview Leasing",
+        "amount": 1410.35,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "18:44"
+      },
+      {
+        "date": "2024-04-09",
+        "payee": "City Power",
+        "amount": 153.44,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "10:57"
+      },
+      {
+        "date": "2024-04-15",
+        "payee": "Target",
+        "amount": 127.43,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "15:28"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:47"
+      },
+      {
+        "date": "2024-04-26",
+        "payee": "Target",
+        "amount": 130.16,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "21:33"
+      },
+      {
+        "date": "2024-04-28",
+        "payee": "Target",
+        "amount": 85.97,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "09:02"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:15"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Parkview Leasing",
+        "amount": 1382.0,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "19:14"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "City Power",
+        "amount": 153.45,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "21:28"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Bancroft Group",
+        "amount": 4500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:32"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Target",
+        "amount": 101.23,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "14:31"
+      },
+      {
+        "date": "2024-05-25",
+        "payee": "Target",
+        "amount": 127.59,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "13:34"
+      },
+      {
+        "date": "2024-05-28",
+        "payee": "Target",
+        "amount": 107.39,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Shopping",
+        "timestamp": "13:57"
+      },
+      {
+        "date": "2024-06-01",
+        "payee": "Prepaid Card Reload",
+        "amount": 260.0,
+        "channel": "ATM",
+        "type": "debit",
+        "description": "Prepaid Card Load",
+        "timestamp": "20:46"
+      },
+      {
+        "date": "2024-06-02",
+        "payee": "Instant Money Remit",
+        "amount": 310.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Remittance",
+        "timestamp": "16:49"
+      },
+      {
+        "date": "2024-06-03",
+        "payee": "Voucher Direct",
+        "amount": 180.0,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Gift Voucher Purchase",
+        "timestamp": "09:07"
+      },
+      {
+        "date": "2024-06-04",
+        "payee": "TopUp Wallet Services",
+        "amount": 240.0,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Wallet Top-Up",
+        "timestamp": "14:23"
+      },
+      {
+        "date": "2024-06-05",
+        "payee": "Global Send Agency",
+        "amount": 295.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Remittance",
+        "timestamp": "08:15"
+      },
+      {
+        "date": "2024-06-06",
+        "payee": "CashPoint Exchange",
+        "amount": 220.0,
+        "channel": "ATM",
+        "type": "debit",
+        "description": "Currency Exchange",
+        "timestamp": "17:27"
+      },
+      {
+        "date": "2024-06-07",
+        "payee": "Rapid Transfer Ltd",
+        "amount": 275.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Outgoing Transfer",
+        "timestamp": "14:10"
+      },
+      {
+        "date": "2024-06-08",
+        "payee": "Digital Voucher Hub",
+        "amount": 160.0,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Gift Voucher Purchase",
+        "timestamp": "14:47"
+      },
+      {
+        "date": "2024-06-09",
+        "payee": "Swift Remit Partners",
+        "amount": 330.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Remittance",
+        "timestamp": "14:07"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_008",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Publix",
+        "amount": 100.74,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:18"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Fielding Estates",
+        "amount": 1220.25,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "19:47"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:03"
+      },
+      {
+        "date": "2024-01-06",
+        "payee": "Corner Pharmacy",
+        "amount": 51.15,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "16:31"
+      },
+      {
+        "date": "2024-01-09",
+        "payee": "City Power",
+        "amount": 114.48,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "16:48"
+      },
+      {
+        "date": "2024-01-15",
+        "payee": "Publix",
+        "amount": 96.43,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:36"
+      },
+      {
+        "date": "2024-01-17",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:39"
+      },
+      {
+        "date": "2024-01-23",
+        "payee": "Publix",
+        "amount": 102.29,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "16:18"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Fielding Estates",
+        "amount": 1218.19,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "13:39"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:09"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "City Power",
+        "amount": 116.64,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "11:01"
+      },
+      {
+        "date": "2024-02-17",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:23"
+      },
+      {
+        "date": "2024-02-18",
+        "payee": "Publix",
+        "amount": 94.19,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:02"
+      },
+      {
+        "date": "2024-02-21",
+        "payee": "Publix",
+        "amount": 89.57,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:02"
+      },
+      {
+        "date": "2024-02-24",
+        "payee": "Corner Pharmacy",
+        "amount": 37.8,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "11:00"
+      },
+      {
+        "date": "2024-02-25",
+        "payee": "Publix",
+        "amount": 90.91,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:33"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Fielding Estates",
+        "amount": 1242.55,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "13:17"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:20"
+      },
+      {
+        "date": "2024-03-05",
+        "payee": "Publix",
+        "amount": 99.8,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "14:52"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "City Power",
+        "amount": 111.86,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "19:34"
+      },
+      {
+        "date": "2024-03-13",
+        "payee": "Corner Pharmacy",
+        "amount": 32.34,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "18:32"
+      },
+      {
+        "date": "2024-03-17",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:38"
+      },
+      {
+        "date": "2024-03-20",
+        "payee": "Publix",
+        "amount": 97.68,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "12:38"
+      },
+      {
+        "date": "2024-03-26",
+        "payee": "Publix",
+        "amount": 102.69,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "12:49"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Fielding Estates",
+        "amount": 1254.85,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "08:16"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Publix",
+        "amount": 107.45,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:54"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:38"
+      },
+      {
+        "date": "2024-04-09",
+        "payee": "City Power",
+        "amount": 113.42,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "21:35"
+      },
+      {
+        "date": "2024-04-12",
+        "payee": "Corner Pharmacy",
+        "amount": 53.76,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "21:43"
+      },
+      {
+        "date": "2024-04-17",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:20"
+      },
+      {
+        "date": "2024-04-25",
+        "payee": "Publix",
+        "amount": 93.62,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:06"
+      },
+      {
+        "date": "2024-04-27",
+        "payee": "Publix",
+        "amount": 97.45,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:31"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Fielding Estates",
+        "amount": 1212.6,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "13:46"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:40"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "QuickPay Transfer",
+        "amount": 420.0,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Peer-to-Peer Transfer",
+        "timestamp": "03:14"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "City Power",
+        "amount": 113.14,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "20:57"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "QuickPay Transfer",
+        "amount": 380.0,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Peer-to-Peer Transfer",
+        "timestamp": "02:47"
+      },
+      {
+        "date": "2024-05-11",
+        "payee": "QuickPay Transfer",
+        "amount": 455.0,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Peer-to-Peer Transfer",
+        "timestamp": "04:05"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Corner Pharmacy",
+        "amount": 50.93,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "08:28"
+      },
+      {
+        "date": "2024-05-17",
+        "payee": "Publix",
+        "amount": 94.92,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "08:28"
+      },
+      {
+        "date": "2024-05-17",
+        "payee": "Ridgeline Logistics",
+        "amount": 3800.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:16"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Publix",
+        "amount": 116.05,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "16:05"
+      },
+      {
+        "date": "2024-05-26",
+        "payee": "Publix",
+        "amount": 90.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:32"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_009",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Uber Eats",
+        "amount": 41.84,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "08:08"
+      },
+      {
+        "date": "2024-01-02",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "11:14"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Highgate Residences",
+        "amount": 1821.19,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "17:26"
+      },
+      {
+        "date": "2024-01-08",
+        "payee": "Daily Grind Coffee",
+        "amount": 7.14,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "17:41"
+      },
+      {
+        "date": "2024-01-09",
+        "payee": "Fiber Internet Co",
+        "amount": 60.93,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Fee",
+        "timestamp": "17:53"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "11:35"
+      },
+      {
+        "date": "2024-01-21",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.41,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "20:08"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.26,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "08:35"
+      },
+      {
+        "date": "2024-01-28",
+        "payee": "Uber Eats",
+        "amount": 43.37,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "20:21"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:28"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Highgate Residences",
+        "amount": 1797.19,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "16:47"
+      },
+      {
+        "date": "2024-02-06",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.86,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "14:44"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "Uber Eats",
+        "amount": 46.9,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "12:37"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "Fiber Internet Co",
+        "amount": 61.26,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Fee",
+        "timestamp": "20:42"
+      },
+      {
+        "date": "2024-02-10",
+        "payee": "Daily Grind Coffee",
+        "amount": 7.39,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "09:54"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:37"
+      },
+      {
+        "date": "2024-02-23",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.47,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "11:57"
+      },
+      {
+        "date": "2024-02-28",
+        "payee": "Uber Eats",
+        "amount": 30.78,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "19:58"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:44"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Highgate Residences",
+        "amount": 1849.65,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "20:31"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Daily Grind Coffee",
+        "amount": 5.67,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "08:42"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "Fiber Internet Co",
+        "amount": 60.19,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Fee",
+        "timestamp": "10:00"
+      },
+      {
+        "date": "2024-03-10",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.16,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "21:55"
+      },
+      {
+        "date": "2024-03-14",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.55,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "17:23"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "11:17"
+      },
+      {
+        "date": "2024-03-22",
+        "payee": "Uber Eats",
+        "amount": 41.93,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "19:39"
+      },
+      {
+        "date": "2024-03-24",
+        "payee": "Uber Eats",
+        "amount": 36.86,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "10:46"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:58"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Uber Eats",
+        "amount": 43.78,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "15:00"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.84,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "15:01"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Highgate Residences",
+        "amount": 1810.18,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "20:31"
+      },
+      {
+        "date": "2024-04-09",
+        "payee": "Fiber Internet Co",
+        "amount": 58.52,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Fee",
+        "timestamp": "09:50"
+      },
+      {
+        "date": "2024-04-13",
+        "payee": "Uber Eats",
+        "amount": 34.91,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "21:01"
+      },
+      {
+        "date": "2024-04-15",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.87,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "11:42"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:50"
+      },
+      {
+        "date": "2024-04-24",
+        "payee": "Daily Grind Coffee",
+        "amount": 7.29,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "12:39"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:35"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Highgate Residences",
+        "amount": 1769.39,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "16:28"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Uber Eats",
+        "amount": 34.32,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "16:41"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "Fiber Internet Co",
+        "amount": 60.57,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Fee",
+        "timestamp": "15:11"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.58,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "20:12"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "Vantage Holdings Ltd",
+        "amount": 3500.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Outgoing Wire Transfer",
+        "timestamp": "03:22"
+      },
+      {
+        "date": "2024-05-15",
+        "payee": "Vantage Holdings Ltd",
+        "amount": 2800.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Outgoing Wire Transfer",
+        "timestamp": "02:58"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Vantage Holdings Ltd",
+        "amount": 2200.0,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Outgoing Wire Transfer",
+        "timestamp": "03:41"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Kestrel Software",
+        "amount": 5500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "11:57"
+      },
+      {
+        "date": "2024-05-18",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.57,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "20:50"
+      },
+      {
+        "date": "2024-05-19",
+        "payee": "Daily Grind Coffee",
+        "amount": 6.63,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "20:02"
+      },
+      {
+        "date": "2024-05-21",
+        "payee": "Uber Eats",
+        "amount": 44.01,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "09:08"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_010",
+    "account_type": "Savings",
+    "transactions": [
+      {
+        "date": "2024-04-03",
+        "payee": "Savings Transfer In",
+        "amount": 2000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Deposit",
+        "timestamp": "10:24"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Savings Transfer Out",
+        "amount": 500.0,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Withdrawal",
+        "timestamp": "14:13"
+      },
+      {
+        "date": "2024-04-19",
+        "payee": "Savings Transfer In",
+        "amount": 2000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Deposit",
+        "timestamp": "21:40"
+      },
+      {
+        "date": "2024-04-26",
+        "payee": "Savings Transfer Out",
+        "amount": 500.0,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Withdrawal",
+        "timestamp": "14:49"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Savings Transfer In",
+        "amount": 2000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Deposit",
+        "timestamp": "15:26"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_011",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:54"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Marlowe Towers",
+        "amount": 2660.83,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "10:02"
+      },
+      {
+        "date": "2024-01-05",
+        "payee": "Nobu Restaurant",
+        "amount": 236.34,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "21:38"
+      },
+      {
+        "date": "2024-01-10",
+        "payee": "Blue Bottle Coffee",
+        "amount": 13.96,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "17:25"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Elite Athletic Club",
+        "amount": 148.88,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "16:23"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:38"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Blue Bottle Coffee",
+        "amount": 12.88,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "12:50"
+      },
+      {
+        "date": "2024-01-27",
+        "payee": "Blue Bottle Coffee",
+        "amount": 10.5,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "19:41"
+      },
+      {
+        "date": "2024-01-29",
+        "payee": "Nobu Restaurant",
+        "amount": 265.96,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "16:51"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:56"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Marlowe Towers",
+        "amount": 2658.27,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "17:29"
+      },
+      {
+        "date": "2024-02-05",
+        "payee": "Blue Bottle Coffee",
+        "amount": 13.43,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "17:08"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "Blue Bottle Coffee",
+        "amount": 11.63,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "10:02"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Elite Athletic Club",
+        "amount": 152.95,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "08:34"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:43"
+      },
+      {
+        "date": "2024-02-18",
+        "payee": "Nobu Restaurant",
+        "amount": 281.98,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "08:49"
+      },
+      {
+        "date": "2024-02-26",
+        "payee": "Blue Bottle Coffee",
+        "amount": 13.69,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "19:51"
+      },
+      {
+        "date": "2024-02-27",
+        "payee": "Nobu Restaurant",
+        "amount": 182.52,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "17:15"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Blue Bottle Coffee",
+        "amount": 10.28,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "11:40"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:23"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Marlowe Towers",
+        "amount": 2540.54,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "13:55"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Elite Athletic Club",
+        "amount": 150.98,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "08:49"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Nobu Restaurant",
+        "amount": 264.42,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "12:41"
+      },
+      {
+        "date": "2024-03-15",
+        "payee": "Blue Bottle Coffee",
+        "amount": 13.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "09:41"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:50"
+      },
+      {
+        "date": "2024-03-17",
+        "payee": "Blue Bottle Coffee",
+        "amount": 10.03,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "09:44"
+      },
+      {
+        "date": "2024-03-20",
+        "payee": "Nobu Restaurant",
+        "amount": 276.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "18:02"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:02"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Marlowe Towers",
+        "amount": 2614.45,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "08:24"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Elite Athletic Club",
+        "amount": 153.4,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "11:48"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Blue Bottle Coffee",
+        "amount": 10.36,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "20:31"
+      },
+      {
+        "date": "2024-04-13",
+        "payee": "Nobu Restaurant",
+        "amount": 258.82,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "13:54"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Blue Bottle Coffee",
+        "amount": 13.2,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "13:42"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:48"
+      },
+      {
+        "date": "2024-04-22",
+        "payee": "Blue Bottle Coffee",
+        "amount": 9.23,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "18:33"
+      },
+      {
+        "date": "2024-04-27",
+        "payee": "Nobu Restaurant",
+        "amount": 249.76,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "20:20"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:28"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Marlowe Towers",
+        "amount": 2527.48,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "17:00"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "Blue Bottle Coffee",
+        "amount": 10.66,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "17:04"
+      },
+      {
+        "date": "2024-05-11",
+        "payee": "Elite Athletic Club",
+        "amount": 147.89,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Membership Fee",
+        "timestamp": "14:34"
+      },
+      {
+        "date": "2024-05-15",
+        "payee": "Nobu Restaurant",
+        "amount": 236.22,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "15:57"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Lumen Startup",
+        "amount": 8000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:21"
+      },
+      {
+        "date": "2024-05-19",
+        "payee": "Nobu Restaurant",
+        "amount": 233.8,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Dining",
+        "timestamp": "08:25"
+      },
+      {
+        "date": "2024-05-19",
+        "payee": "Blue Bottle Coffee",
+        "amount": 9.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "10:08"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Blue Bottle Coffee",
+        "amount": 9.36,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Coffee",
+        "timestamp": "16:22"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_012",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-03",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:44"
+      },
+      {
+        "date": "2024-01-09",
+        "payee": "Housing Authority",
+        "amount": 1194.04,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent",
+        "timestamp": "09:07"
+      },
+      {
+        "date": "2024-01-13",
+        "payee": "Transit Authority",
+        "amount": 23.64,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "12:04"
+      },
+      {
+        "date": "2024-01-14",
+        "payee": "City Power",
+        "amount": 76.78,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "11:27"
+      },
+      {
+        "date": "2024-01-15",
+        "payee": "Transit Authority",
+        "amount": 20.22,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "14:38"
+      },
+      {
+        "date": "2024-01-17",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:04"
+      },
+      {
+        "date": "2024-01-18",
+        "payee": "Aldi",
+        "amount": 58.84,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:33"
+      },
+      {
+        "date": "2024-01-23",
+        "payee": "Aldi",
+        "amount": 49.92,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:37"
+      },
+      {
+        "date": "2024-01-23",
+        "payee": "Aldi",
+        "amount": 51.64,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:43"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:43"
+      },
+      {
+        "date": "2024-02-04",
+        "payee": "Transit Authority",
+        "amount": 21.57,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "13:34"
+      },
+      {
+        "date": "2024-02-07",
+        "payee": "Aldi",
+        "amount": 51.22,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:35"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "Transit Authority",
+        "amount": 26.32,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "14:07"
+      },
+      {
+        "date": "2024-02-09",
+        "payee": "Housing Authority",
+        "amount": 1229.84,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent",
+        "timestamp": "20:45"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Aldi",
+        "amount": 47.27,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:24"
+      },
+      {
+        "date": "2024-02-14",
+        "payee": "City Power",
+        "amount": 80.08,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "14:18"
+      },
+      {
+        "date": "2024-02-17",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:58"
+      },
+      {
+        "date": "2024-02-23",
+        "payee": "Aldi",
+        "amount": 41.92,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:13"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:59"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "Aldi",
+        "amount": 61.84,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "11:30"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "Housing Authority",
+        "amount": 1194.28,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent",
+        "timestamp": "20:29"
+      },
+      {
+        "date": "2024-03-12",
+        "payee": "Aldi",
+        "amount": 50.21,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "18:44"
+      },
+      {
+        "date": "2024-03-14",
+        "payee": "City Power",
+        "amount": 76.25,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "18:23"
+      },
+      {
+        "date": "2024-03-15",
+        "payee": "Transit Authority",
+        "amount": 25.34,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "09:31"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Transit Authority",
+        "amount": 24.96,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "11:23"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Aldi",
+        "amount": 52.5,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:54"
+      },
+      {
+        "date": "2024-03-17",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:44"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:41"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Aldi",
+        "amount": 49.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:59"
+      },
+      {
+        "date": "2024-04-06",
+        "payee": "Aldi",
+        "amount": 57.15,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:02"
+      },
+      {
+        "date": "2024-04-09",
+        "payee": "Housing Authority",
+        "amount": 1225.79,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent",
+        "timestamp": "09:48"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Aldi",
+        "amount": 52.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "17:32"
+      },
+      {
+        "date": "2024-04-14",
+        "payee": "City Power",
+        "amount": 77.84,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "08:14"
+      },
+      {
+        "date": "2024-04-17",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:45"
+      },
+      {
+        "date": "2024-04-20",
+        "payee": "Transit Authority",
+        "amount": 28.25,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "17:56"
+      },
+      {
+        "date": "2024-04-23",
+        "payee": "Transit Authority",
+        "amount": 26.68,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "08:13"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:35"
+      },
+      {
+        "date": "2024-05-04",
+        "payee": "Aldi",
+        "amount": 55.95,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:14"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "Housing Authority",
+        "amount": 1207.3,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent",
+        "timestamp": "21:32"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "Aldi",
+        "amount": 55.64,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:12"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "Aldi",
+        "amount": 41.67,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "18:41"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "City Power",
+        "amount": 77.89,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "20:33"
+      },
+      {
+        "date": "2024-05-17",
+        "payee": "State Benefits Office",
+        "amount": 2500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:58"
+      },
+      {
+        "date": "2024-05-17",
+        "payee": "Transit Authority",
+        "amount": 26.4,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "15:30"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Transit Authority",
+        "amount": 30.0,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Transit Pass",
+        "timestamp": "10:32"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_013",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-04",
+        "payee": "Coworking Loft",
+        "amount": 816.02,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Workspace Rental",
+        "timestamp": "10:19"
+      },
+      {
+        "date": "2024-01-09",
+        "payee": "Amtrak",
+        "amount": 160.59,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Travel",
+        "timestamp": "10:34"
+      },
+      {
+        "date": "2024-01-10",
+        "payee": "Adobe Creative Cloud",
+        "amount": 53.99,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "09:20"
+      },
+      {
+        "date": "2024-01-13",
+        "payee": "Kroger",
+        "amount": 67.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "09:46"
+      },
+      {
+        "date": "2024-01-14",
+        "payee": "Client Retainer",
+        "amount": 3664.22,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "08:14"
+      },
+      {
+        "date": "2024-01-15",
+        "payee": "Kroger",
+        "amount": 69.84,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "09:51"
+      },
+      {
+        "date": "2024-02-04",
+        "payee": "Coworking Loft",
+        "amount": 819.51,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Workspace Rental",
+        "timestamp": "08:21"
+      },
+      {
+        "date": "2024-02-10",
+        "payee": "Adobe Creative Cloud",
+        "amount": 54.32,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "20:20"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Amtrak",
+        "amount": 121.27,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Travel",
+        "timestamp": "15:44"
+      },
+      {
+        "date": "2024-02-14",
+        "payee": "Client Retainer",
+        "amount": 4662.4,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "12:18"
+      },
+      {
+        "date": "2024-02-21",
+        "payee": "Kroger",
+        "amount": 93.73,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:26"
+      },
+      {
+        "date": "2024-02-29",
+        "payee": "Kroger",
+        "amount": 65.19,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:03"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Client Retainer",
+        "amount": 4458.58,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "08:24"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Coworking Loft",
+        "amount": 789.17,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Workspace Rental",
+        "timestamp": "09:27"
+      },
+      {
+        "date": "2024-03-06",
+        "payee": "Kroger",
+        "amount": 72.17,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:43"
+      },
+      {
+        "date": "2024-03-10",
+        "payee": "Adobe Creative Cloud",
+        "amount": 53.01,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "20:04"
+      },
+      {
+        "date": "2024-03-17",
+        "payee": "Kroger",
+        "amount": 71.22,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "12:35"
+      },
+      {
+        "date": "2024-03-23",
+        "payee": "Amtrak",
+        "amount": 165.62,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Travel",
+        "timestamp": "08:16"
+      },
+      {
+        "date": "2024-04-04",
+        "payee": "Coworking Loft",
+        "amount": 776.35,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Workspace Rental",
+        "timestamp": "08:52"
+      },
+      {
+        "date": "2024-04-04",
+        "payee": "Kroger",
+        "amount": 86.62,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "11:53"
+      },
+      {
+        "date": "2024-04-04",
+        "payee": "Client Retainer",
+        "amount": 3191.78,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "15:44"
+      },
+      {
+        "date": "2024-04-10",
+        "payee": "Adobe Creative Cloud",
+        "amount": 52.73,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "17:18"
+      },
+      {
+        "date": "2024-04-20",
+        "payee": "Kroger",
+        "amount": 92.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "17:58"
+      },
+      {
+        "date": "2024-04-24",
+        "payee": "Amtrak",
+        "amount": 164.66,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Travel",
+        "timestamp": "21:55"
+      },
+      {
+        "date": "2024-05-04",
+        "payee": "Coworking Loft",
+        "amount": 777.34,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Workspace Rental",
+        "timestamp": "10:30"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "Amtrak",
+        "amount": 154.37,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Travel",
+        "timestamp": "09:43"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "Adobe Creative Cloud",
+        "amount": 54.34,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "10:32"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Kroger",
+        "amount": 71.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "14:10"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Client Retainer",
+        "amount": 4186.56,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "15:17"
+      },
+      {
+        "date": "2024-05-21",
+        "payee": "Kroger",
+        "amount": 82.15,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "16:53"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_014",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-03",
+        "payee": "University Housing",
+        "amount": 617.23,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Dorm Fees",
+        "timestamp": "17:11"
+      },
+      {
+        "date": "2024-01-04",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:57"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Campus Cafeteria",
+        "amount": 23.44,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "21:52"
+      },
+      {
+        "date": "2024-01-12",
+        "payee": "Student Health Plan",
+        "amount": 43.72,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Insurance",
+        "timestamp": "12:34"
+      },
+      {
+        "date": "2024-01-13",
+        "payee": "Campus Cafeteria",
+        "amount": 20.84,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "12:32"
+      },
+      {
+        "date": "2024-01-13",
+        "payee": "Campus Cafeteria",
+        "amount": 16.87,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "13:30"
+      },
+      {
+        "date": "2024-01-18",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:35"
+      },
+      {
+        "date": "2024-01-22",
+        "payee": "Campus Cafeteria",
+        "amount": 17.89,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "17:00"
+      },
+      {
+        "date": "2024-01-26",
+        "payee": "Steam Games",
+        "amount": 59.33,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Entertainment",
+        "timestamp": "14:02"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Campus Cafeteria",
+        "amount": 12.86,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "13:36"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "University Housing",
+        "amount": 614.07,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Dorm Fees",
+        "timestamp": "14:13"
+      },
+      {
+        "date": "2024-02-04",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:12"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Steam Games",
+        "amount": 45.68,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Entertainment",
+        "timestamp": "20:28"
+      },
+      {
+        "date": "2024-02-12",
+        "payee": "Student Health Plan",
+        "amount": 44.41,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Insurance",
+        "timestamp": "21:19"
+      },
+      {
+        "date": "2024-02-15",
+        "payee": "Campus Cafeteria",
+        "amount": 15.72,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "20:54"
+      },
+      {
+        "date": "2024-02-17",
+        "payee": "Campus Cafeteria",
+        "amount": 17.45,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "09:31"
+      },
+      {
+        "date": "2024-02-18",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:10"
+      },
+      {
+        "date": "2024-02-26",
+        "payee": "Campus Cafeteria",
+        "amount": 12.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "18:11"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "University Housing",
+        "amount": 638.1,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Dorm Fees",
+        "timestamp": "10:42"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Campus Cafeteria",
+        "amount": 18.51,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "15:33"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:29"
+      },
+      {
+        "date": "2024-03-09",
+        "payee": "Campus Cafeteria",
+        "amount": 20.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "19:41"
+      },
+      {
+        "date": "2024-03-12",
+        "payee": "Student Health Plan",
+        "amount": 45.51,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Insurance",
+        "timestamp": "16:49"
+      },
+      {
+        "date": "2024-03-18",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:09"
+      },
+      {
+        "date": "2024-03-20",
+        "payee": "Steam Games",
+        "amount": 32.75,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Entertainment",
+        "timestamp": "17:28"
+      },
+      {
+        "date": "2024-03-21",
+        "payee": "Campus Cafeteria",
+        "amount": 19.04,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "21:08"
+      },
+      {
+        "date": "2024-03-25",
+        "payee": "Campus Cafeteria",
+        "amount": 13.96,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "21:31"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Campus Cafeteria",
+        "amount": 23.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "15:00"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "University Housing",
+        "amount": 609.86,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Dorm Fees",
+        "timestamp": "08:14"
+      },
+      {
+        "date": "2024-04-04",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "17:30"
+      },
+      {
+        "date": "2024-04-05",
+        "payee": "Steam Games",
+        "amount": 20.3,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Entertainment",
+        "timestamp": "09:37"
+      },
+      {
+        "date": "2024-04-06",
+        "payee": "Campus Cafeteria",
+        "amount": 19.38,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "09:06"
+      },
+      {
+        "date": "2024-04-07",
+        "payee": "Campus Cafeteria",
+        "amount": 19.04,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "18:00"
+      },
+      {
+        "date": "2024-04-12",
+        "payee": "Student Health Plan",
+        "amount": 45.2,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Insurance",
+        "timestamp": "20:10"
+      },
+      {
+        "date": "2024-04-12",
+        "payee": "Campus Cafeteria",
+        "amount": 14.55,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "20:23"
+      },
+      {
+        "date": "2024-04-18",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:15"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "University Housing",
+        "amount": 629.29,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Dorm Fees",
+        "timestamp": "15:50"
+      },
+      {
+        "date": "2024-05-04",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:58"
+      },
+      {
+        "date": "2024-05-07",
+        "payee": "Campus Cafeteria",
+        "amount": 23.47,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "08:44"
+      },
+      {
+        "date": "2024-05-12",
+        "payee": "Student Health Plan",
+        "amount": 45.36,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Insurance",
+        "timestamp": "09:39"
+      },
+      {
+        "date": "2024-05-12",
+        "payee": "Campus Cafeteria",
+        "amount": 17.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "17:18"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Campus Cafeteria",
+        "amount": 16.62,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "21:00"
+      },
+      {
+        "date": "2024-05-18",
+        "payee": "Campus Employment Office",
+        "amount": 1400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:34"
+      },
+      {
+        "date": "2024-05-24",
+        "payee": "Steam Games",
+        "amount": 43.61,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Entertainment",
+        "timestamp": "12:02"
+      },
+      {
+        "date": "2024-05-27",
+        "payee": "Campus Cafeteria",
+        "amount": 18.37,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Meals",
+        "timestamp": "09:01"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_015",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-07",
+        "payee": "Fairmont Brokerage",
+        "amount": 7948.79,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Bond Investment",
+        "timestamp": "16:04"
+      },
+      {
+        "date": "2024-01-14",
+        "payee": "Wealth Advisory Fees",
+        "amount": 395.41,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Advisory Fee",
+        "timestamp": "10:25"
+      },
+      {
+        "date": "2024-01-17",
+        "payee": "Whole Foods",
+        "amount": 163.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:46"
+      },
+      {
+        "date": "2024-01-18",
+        "payee": "Whole Foods",
+        "amount": 154.35,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "12:35"
+      },
+      {
+        "date": "2024-01-19",
+        "payee": "Client Retainer",
+        "amount": 4655.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "17:01"
+      },
+      {
+        "date": "2024-02-07",
+        "payee": "Fairmont Brokerage",
+        "amount": 8102.21,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Bond Investment",
+        "timestamp": "14:01"
+      },
+      {
+        "date": "2024-02-10",
+        "payee": "Whole Foods",
+        "amount": 123.88,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:58"
+      },
+      {
+        "date": "2024-02-12",
+        "payee": "Client Retainer",
+        "amount": 3573.39,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "14:46"
+      },
+      {
+        "date": "2024-02-14",
+        "payee": "Wealth Advisory Fees",
+        "amount": 410.15,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Advisory Fee",
+        "timestamp": "10:35"
+      },
+      {
+        "date": "2024-02-21",
+        "payee": "Whole Foods",
+        "amount": 189.58,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "14:31"
+      },
+      {
+        "date": "2024-03-04",
+        "payee": "Whole Foods",
+        "amount": 152.37,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "18:03"
+      },
+      {
+        "date": "2024-03-05",
+        "payee": "Client Retainer",
+        "amount": 3731.76,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "19:22"
+      },
+      {
+        "date": "2024-03-07",
+        "payee": "Fairmont Brokerage",
+        "amount": 7791.59,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Bond Investment",
+        "timestamp": "09:13"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Whole Foods",
+        "amount": 132.76,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "14:39"
+      },
+      {
+        "date": "2024-03-14",
+        "payee": "Wealth Advisory Fees",
+        "amount": 392.74,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Advisory Fee",
+        "timestamp": "09:57"
+      },
+      {
+        "date": "2024-04-07",
+        "payee": "Fairmont Brokerage",
+        "amount": 8216.77,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Bond Investment",
+        "timestamp": "09:33"
+      },
+      {
+        "date": "2024-04-14",
+        "payee": "Client Retainer",
+        "amount": 4015.28,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "14:45"
+      },
+      {
+        "date": "2024-04-14",
+        "payee": "Wealth Advisory Fees",
+        "amount": 390.81,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Advisory Fee",
+        "timestamp": "18:06"
+      },
+      {
+        "date": "2024-04-15",
+        "payee": "Whole Foods",
+        "amount": 165.32,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:31"
+      },
+      {
+        "date": "2024-04-23",
+        "payee": "Whole Foods",
+        "amount": 151.59,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "11:25"
+      },
+      {
+        "date": "2024-05-07",
+        "payee": "Fairmont Brokerage",
+        "amount": 7899.76,
+        "channel": "Wire",
+        "type": "debit",
+        "description": "Bond Investment",
+        "timestamp": "17:08"
+      },
+      {
+        "date": "2024-05-11",
+        "payee": "Whole Foods",
+        "amount": 164.64,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:34"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "Wealth Advisory Fees",
+        "amount": 397.84,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Advisory Fee",
+        "timestamp": "15:10"
+      },
+      {
+        "date": "2024-05-15",
+        "payee": "Whole Foods",
+        "amount": 169.91,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "09:06"
+      },
+      {
+        "date": "2024-05-18",
+        "payee": "Client Retainer",
+        "amount": 4511.25,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Project Payment",
+        "timestamp": "20:56"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_016",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:25"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Sunnyvale Rentals",
+        "amount": 1463.52,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "11:47"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Corner Pharmacy",
+        "amount": 64.58,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "08:00"
+      },
+      {
+        "date": "2024-01-11",
+        "payee": "Safeway",
+        "amount": 89.42,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:12"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:43"
+      },
+      {
+        "date": "2024-01-21",
+        "payee": "Safeway",
+        "amount": 106.1,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "14:38"
+      },
+      {
+        "date": "2024-01-25",
+        "payee": "Shell Station",
+        "amount": 43.59,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "18:03"
+      },
+      {
+        "date": "2024-01-27",
+        "payee": "Safeway",
+        "amount": 70.01,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:19"
+      },
+      {
+        "date": "2024-01-29",
+        "payee": "Shell Station",
+        "amount": 45.68,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "21:13"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "18:01"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Safeway",
+        "amount": 108.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:44"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Sunnyvale Rentals",
+        "amount": 1457.09,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "20:30"
+      },
+      {
+        "date": "2024-02-06",
+        "payee": "Safeway",
+        "amount": 85.78,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:11"
+      },
+      {
+        "date": "2024-02-11",
+        "payee": "Corner Pharmacy",
+        "amount": 65.95,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "10:28"
+      },
+      {
+        "date": "2024-02-14",
+        "payee": "Safeway",
+        "amount": 79.14,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:34"
+      },
+      {
+        "date": "2024-02-15",
+        "payee": "Shell Station",
+        "amount": 52.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "18:54"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:14"
+      },
+      {
+        "date": "2024-02-25",
+        "payee": "Shell Station",
+        "amount": 41.18,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "14:54"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:48"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Safeway",
+        "amount": 107.03,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:42"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Shell Station",
+        "amount": 42.27,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "09:21"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Sunnyvale Rentals",
+        "amount": 1471.85,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "13:35"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Corner Pharmacy",
+        "amount": 64.39,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "20:45"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:43"
+      },
+      {
+        "date": "2024-03-21",
+        "payee": "Shell Station",
+        "amount": 40.39,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "08:38"
+      },
+      {
+        "date": "2024-03-24",
+        "payee": "Safeway",
+        "amount": 78.63,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "17:55"
+      },
+      {
+        "date": "2024-03-29",
+        "payee": "Safeway",
+        "amount": 105.81,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:19"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:03"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Sunnyvale Rentals",
+        "amount": 1476.09,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "09:13"
+      },
+      {
+        "date": "2024-04-05",
+        "payee": "Safeway",
+        "amount": 91.26,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "16:30"
+      },
+      {
+        "date": "2024-04-10",
+        "payee": "Safeway",
+        "amount": 103.86,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:43"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Shell Station",
+        "amount": 43.13,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "12:54"
+      },
+      {
+        "date": "2024-04-11",
+        "payee": "Corner Pharmacy",
+        "amount": 65.48,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "17:07"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:35"
+      },
+      {
+        "date": "2024-04-17",
+        "payee": "Shell Station",
+        "amount": 49.36,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "20:39"
+      },
+      {
+        "date": "2024-04-28",
+        "payee": "Safeway",
+        "amount": 86.7,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:34"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:22"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Sunnyvale Rentals",
+        "amount": 1539.61,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "11:56"
+      },
+      {
+        "date": "2024-05-11",
+        "payee": "Corner Pharmacy",
+        "amount": 66.44,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Prescription",
+        "timestamp": "10:52"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Mercy Health Group",
+        "amount": 4200.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:32"
+      },
+      {
+        "date": "2024-05-19",
+        "payee": "Shell Station",
+        "amount": 54.38,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "11:30"
+      },
+      {
+        "date": "2024-05-21",
+        "payee": "Safeway",
+        "amount": 101.53,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "09:34"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Safeway",
+        "amount": 96.6,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:08"
+      },
+      {
+        "date": "2024-05-24",
+        "payee": "Shell Station",
+        "amount": 48.9,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "09:19"
+      },
+      {
+        "date": "2024-05-25",
+        "payee": "Safeway",
+        "amount": 88.1,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:29"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_017",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-03",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:41"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Ashcroft Mortgage",
+        "amount": 2126.32,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "09:28"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Shell Station",
+        "amount": 57.42,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "11:49"
+      },
+      {
+        "date": "2024-01-07",
+        "payee": "Shell Station",
+        "amount": 70.77,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "12:41"
+      },
+      {
+        "date": "2024-01-10",
+        "payee": "Shell Station",
+        "amount": 60.14,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "10:17"
+      },
+      {
+        "date": "2024-01-13",
+        "payee": "Statewide Auto Insurance",
+        "amount": 118.37,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Premium",
+        "timestamp": "12:58"
+      },
+      {
+        "date": "2024-01-17",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "10:36"
+      },
+      {
+        "date": "2024-01-20",
+        "payee": "Home Depot",
+        "amount": 135.23,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Home Improvement",
+        "timestamp": "20:15"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Shell Station",
+        "amount": 68.48,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "14:01"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:50"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Ashcroft Mortgage",
+        "amount": 2151.82,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "16:37"
+      },
+      {
+        "date": "2024-02-13",
+        "payee": "Statewide Auto Insurance",
+        "amount": 120.78,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Premium",
+        "timestamp": "14:10"
+      },
+      {
+        "date": "2024-02-17",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:01"
+      },
+      {
+        "date": "2024-02-26",
+        "payee": "Shell Station",
+        "amount": 67.88,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "14:14"
+      },
+      {
+        "date": "2024-02-28",
+        "payee": "Home Depot",
+        "amount": 89.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Home Improvement",
+        "timestamp": "13:53"
+      },
+      {
+        "date": "2024-02-28",
+        "payee": "Shell Station",
+        "amount": 69.52,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "16:44"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Shell Station",
+        "amount": 61.88,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "17:11"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:09"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Ashcroft Mortgage",
+        "amount": 2107.78,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "17:32"
+      },
+      {
+        "date": "2024-03-08",
+        "payee": "Home Depot",
+        "amount": 85.34,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Home Improvement",
+        "timestamp": "15:34"
+      },
+      {
+        "date": "2024-03-13",
+        "payee": "Statewide Auto Insurance",
+        "amount": 118.53,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Premium",
+        "timestamp": "17:41"
+      },
+      {
+        "date": "2024-03-17",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:23"
+      },
+      {
+        "date": "2024-03-18",
+        "payee": "Shell Station",
+        "amount": 66.21,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "20:07"
+      },
+      {
+        "date": "2024-03-19",
+        "payee": "Shell Station",
+        "amount": 66.03,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "13:32"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Shell Station",
+        "amount": 58.87,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "14:55"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:39"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Ashcroft Mortgage",
+        "amount": 2117.04,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "15:49"
+      },
+      {
+        "date": "2024-04-13",
+        "payee": "Statewide Auto Insurance",
+        "amount": 117.34,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Premium",
+        "timestamp": "17:37"
+      },
+      {
+        "date": "2024-04-15",
+        "payee": "Home Depot",
+        "amount": 94.08,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Home Improvement",
+        "timestamp": "20:38"
+      },
+      {
+        "date": "2024-04-17",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "12:58"
+      },
+      {
+        "date": "2024-04-23",
+        "payee": "Shell Station",
+        "amount": 60.69,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "19:34"
+      },
+      {
+        "date": "2024-04-27",
+        "payee": "Shell Station",
+        "amount": 65.79,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "09:34"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "14:44"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Ashcroft Mortgage",
+        "amount": 2136.93,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "timestamp": "21:10"
+      },
+      {
+        "date": "2024-05-13",
+        "payee": "Statewide Auto Insurance",
+        "amount": 122.55,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Premium",
+        "timestamp": "18:06"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "Shell Station",
+        "amount": 70.91,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "08:44"
+      },
+      {
+        "date": "2024-05-14",
+        "payee": "Shell Station",
+        "amount": 63.12,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "17:45"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Shell Station",
+        "amount": 69.94,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Fuel",
+        "timestamp": "11:53"
+      },
+      {
+        "date": "2024-05-17",
+        "payee": "Corporate HQ Payroll",
+        "amount": 6500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "21:18"
+      },
+      {
+        "date": "2024-05-21",
+        "payee": "Home Depot",
+        "amount": 153.2,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Home Improvement",
+        "timestamp": "15:25"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_018",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-01-02",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:37"
+      },
+      {
+        "date": "2024-01-03",
+        "payee": "Cedar Court Apartments",
+        "amount": 1119.13,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "09:42"
+      },
+      {
+        "date": "2024-01-06",
+        "payee": "Kroger",
+        "amount": 78.8,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "17:12"
+      },
+      {
+        "date": "2024-01-07",
+        "payee": "Kroger",
+        "amount": 86.72,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "10:49"
+      },
+      {
+        "date": "2024-01-09",
+        "payee": "Old Navy",
+        "amount": 97.48,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Clothing",
+        "timestamp": "17:51"
+      },
+      {
+        "date": "2024-01-10",
+        "payee": "City Power",
+        "amount": 100.51,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "21:19"
+      },
+      {
+        "date": "2024-01-12",
+        "payee": "Kroger",
+        "amount": 91.41,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "08:54"
+      },
+      {
+        "date": "2024-01-16",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "11:36"
+      },
+      {
+        "date": "2024-02-02",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "10:04"
+      },
+      {
+        "date": "2024-02-03",
+        "payee": "Cedar Court Apartments",
+        "amount": 1068.47,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "09:43"
+      },
+      {
+        "date": "2024-02-10",
+        "payee": "City Power",
+        "amount": 98.06,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "08:55"
+      },
+      {
+        "date": "2024-02-16",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "08:20"
+      },
+      {
+        "date": "2024-02-17",
+        "payee": "Kroger",
+        "amount": 71.33,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "18:50"
+      },
+      {
+        "date": "2024-02-22",
+        "payee": "Old Navy",
+        "amount": 52.23,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Clothing",
+        "timestamp": "16:43"
+      },
+      {
+        "date": "2024-02-23",
+        "payee": "Kroger",
+        "amount": 87.74,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "08:31"
+      },
+      {
+        "date": "2024-02-25",
+        "payee": "Kroger",
+        "amount": 76.41,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "16:19"
+      },
+      {
+        "date": "2024-03-02",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "20:41"
+      },
+      {
+        "date": "2024-03-03",
+        "payee": "Cedar Court Apartments",
+        "amount": 1084.12,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "17:06"
+      },
+      {
+        "date": "2024-03-10",
+        "payee": "City Power",
+        "amount": 97.76,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "11:52"
+      },
+      {
+        "date": "2024-03-11",
+        "payee": "Old Navy",
+        "amount": 53.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Clothing",
+        "timestamp": "20:34"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "10:15"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Kroger",
+        "amount": 71.39,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:11"
+      },
+      {
+        "date": "2024-03-16",
+        "payee": "Kroger",
+        "amount": 78.49,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:34"
+      },
+      {
+        "date": "2024-03-18",
+        "payee": "Kroger",
+        "amount": 73.75,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "11:44"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "09:13"
+      },
+      {
+        "date": "2024-04-02",
+        "payee": "Kroger",
+        "amount": 68.31,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "13:40"
+      },
+      {
+        "date": "2024-04-03",
+        "payee": "Cedar Court Apartments",
+        "amount": 1105.27,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "15:24"
+      },
+      {
+        "date": "2024-04-10",
+        "payee": "Old Navy",
+        "amount": 75.11,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Clothing",
+        "timestamp": "14:54"
+      },
+      {
+        "date": "2024-04-10",
+        "payee": "Kroger",
+        "amount": 75.3,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:26"
+      },
+      {
+        "date": "2024-04-10",
+        "payee": "City Power",
+        "amount": 102.11,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "20:40"
+      },
+      {
+        "date": "2024-04-16",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "16:40"
+      },
+      {
+        "date": "2024-04-27",
+        "payee": "Kroger",
+        "amount": 82.45,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:51"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "15:42"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Cedar Court Apartments",
+        "amount": 1113.1,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Rent Payment",
+        "timestamp": "08:00"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "City Power",
+        "amount": 102.38,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Electric Bill",
+        "timestamp": "08:59"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Old Navy",
+        "amount": 78.2,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Clothing",
+        "timestamp": "11:52"
+      },
+      {
+        "date": "2024-05-16",
+        "payee": "Fairview Retail",
+        "amount": 3500.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "13:19"
+      },
+      {
+        "date": "2024-05-23",
+        "payee": "Kroger",
+        "amount": 87.87,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:47"
+      },
+      {
+        "date": "2024-05-23",
+        "payee": "Kroger",
+        "amount": 80.54,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "21:42"
+      },
+      {
+        "date": "2024-05-25",
+        "payee": "Kroger",
+        "amount": 77.98,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "19:38"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_019",
+    "account_type": "Savings",
+    "transactions": [
+      {
+        "date": "2024-04-05",
+        "payee": "Regular Deposit",
+        "amount": 1000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Savings Deposit",
+        "timestamp": "14:10"
+      },
+      {
+        "date": "2024-04-20",
+        "payee": "Regular Deposit",
+        "amount": 1000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Savings Deposit",
+        "timestamp": "20:12"
+      },
+      {
+        "date": "2024-05-06",
+        "payee": "Regular Deposit",
+        "amount": 1000.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Savings Deposit",
+        "timestamp": "08:21"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_020",
+    "account_type": "Checking",
+    "transactions": [
+      {
+        "date": "2024-05-01",
+        "payee": "Uber Eats",
+        "amount": 47.37,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "21:02"
+      },
+      {
+        "date": "2024-05-02",
+        "payee": "Kroger",
+        "amount": 53.83,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:49"
+      },
+      {
+        "date": "2024-05-03",
+        "payee": "Tessellate Labs",
+        "amount": 3400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "10:54"
+      },
+      {
+        "date": "2024-05-07",
+        "payee": "Kroger",
+        "amount": 55.65,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "20:54"
+      },
+      {
+        "date": "2024-05-07",
+        "payee": "Cloud Services",
+        "amount": 25.27,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Subscription",
+        "timestamp": "21:39"
+      },
+      {
+        "date": "2024-05-09",
+        "payee": "Uber Eats",
+        "amount": 38.62,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "18:59"
+      },
+      {
+        "date": "2024-05-10",
+        "payee": "Metro Transit",
+        "amount": 60.61,
+        "channel": "ACH",
+        "type": "debit",
+        "description": "Monthly Pass",
+        "timestamp": "13:38"
+      },
+      {
+        "date": "2024-05-11",
+        "payee": "Kroger",
+        "amount": 50.73,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Groceries",
+        "timestamp": "15:03"
+      },
+      {
+        "date": "2024-05-12",
+        "payee": "Best Buy",
+        "amount": 178.28,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Electronics",
+        "timestamp": "16:58"
+      },
+      {
+        "date": "2024-05-17",
+        "payee": "Tessellate Labs",
+        "amount": 3400.0,
+        "channel": "ACH",
+        "type": "credit",
+        "description": "Salary Deposit",
+        "timestamp": "19:33"
+      },
+      {
+        "date": "2024-05-19",
+        "payee": "Uber Eats",
+        "amount": 42.63,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "08:32"
+      },
+      {
+        "date": "2024-05-21",
+        "payee": "Best Buy",
+        "amount": 154.59,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Electronics",
+        "timestamp": "13:43"
+      },
+      {
+        "date": "2024-05-22",
+        "payee": "Uber Eats",
+        "amount": 39.31,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "10:38"
+      },
+      {
+        "date": "2024-05-23",
+        "payee": "Best Buy",
+        "amount": 163.27,
+        "channel": "Debit Card",
+        "type": "debit",
+        "description": "Electronics",
+        "timestamp": "17:08"
+      },
+      {
+        "date": "2024-05-26",
+        "payee": "Uber Eats",
+        "amount": 39.99,
+        "channel": "Online",
+        "type": "debit",
+        "description": "Food Delivery",
+        "timestamp": "21:04"
+      }
+    ]
+  }
+]
