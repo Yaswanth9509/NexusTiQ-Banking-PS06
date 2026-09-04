@@ -1,9 +1,10 @@
 """Data Models - Pydantic Schemas for Transaction Analysis"""
 
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, model_validator
 from datetime import datetime
 from typing import List, Optional, Set
-import uuid
+
+from src.utils import make_transaction_id
 
 
 class Transaction(BaseModel):
@@ -24,10 +25,8 @@ class Transaction(BaseModel):
     timestamp: Optional[str] = None             # "HH:MM" when time-of-day is known
     transaction_id: Optional[str] = None        # Auto-generated if not provided
 
-    def __init__(self, **data):
-        super().__init__(**data)
-        if not self.transaction_id:
-            self.transaction_id = f"TXN_{uuid.uuid4().hex[:8].upper()}"
+    # transaction_id is filled in by CustomerHistory, which knows the customer
+    # and the row's position and can therefore derive a stable value.
 
 
 class CustomerHistory(BaseModel):
@@ -35,6 +34,23 @@ class CustomerHistory(BaseModel):
     customer_id: str
     account_type: str
     transactions: List[Transaction]
+
+    @model_validator(mode="after")
+    def _assign_transaction_ids(self):
+        """
+        Give every transaction a stable identifier.
+
+        Histories supplied by a caller may carry no ids at all; those in
+        data/sample_customers.json already do, and are left alone. Either way
+        the same transaction ends up with the same reference on every run, which
+        is what lets a finding be followed back to the row it came from.
+        """
+        for index, txn in enumerate(self.transactions):
+            if not txn.transaction_id:
+                txn.transaction_id = make_transaction_id(
+                    self.customer_id, index, txn.date, txn.payee, txn.amount
+                )
+        return self
 
 
 class CustomerProfile(BaseModel):

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transaction Risk Investigation</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --ink: #1b1f24;
+    --muted: #666f7a;
+    --line: #e2e6ea;
+    --accent: #2a5db0;
+    --routine: #2f7d4f;
+    --routine-bg: #eaf5ee;
+    --investigate: #b06a00;
+    --investigate-bg: #fdf3e3;
+    --escalate: #a32b2b;
+    --escalate-bg: #fbecec;
+    --insufficient: #5a6472;
+    --insufficient-bg: #eef0f3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a; --panel: #1c2024; --ink: #e8eaed; --muted: #9aa4b0;
+      --line: #2c3238; --accent: #7aa5e8;
+      --routine: #6dc48d; --routine-bg: #1a2a20;
+      --investigate: #e0a34a; --investigate-bg: #2b2318;
+      --escalate: #e57373; --escalate-bg: #2c1d1d;
+      --insufficient: #9aa4b0; --insufficient-bg: #23282d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    padding: 18px 24px; background: var(--panel); border-bottom: 1px solid var(--line);
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }
+  header h1 { font-size: 17px; margin: 0; font-weight: 650; letter-spacing: -0.01em; }
+  header .track { font-size: 12px; color: var(--muted); font-family: ui-monospace, Menlo, Consolas, monospace; }
+  header .spacer { flex: 1; }
+  #modelstate { font-size: 12px; color: var(--muted); }
+  .layout { display: grid; grid-template-columns: 280px 1fr; gap: 20px; padding: 20px 24px; align-items: start; }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+  .panel h2 {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+    margin: 0; padding: 12px 14px; border-bottom: 1px solid var(--line); font-weight: 600;
+  }
+  #queue { max-height: calc(100vh - 160px); overflow-y: auto; }
+  .cust {
+    width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line);
+    padding: 10px 14px; cursor: pointer; color: inherit; font: inherit; display: block;
+  }
+  .cust:hover { background: color-mix(in srgb, var(--accent) 7%, transparent); }
+  .cust[aria-current="true"] { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+  .cust .id { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; }
+  .cust .meta { font-size: 12px; color: var(--muted); }
+
+  .report { padding: 18px; }
+  .empty { padding: 48px 20px; text-align: center; color: var(--muted); }
+
+  .verdict { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 6px; }
+  .badge {
+    font-size: 13px; font-weight: 650; padding: 5px 12px; border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .badge.ROUTINE { color: var(--routine); background: var(--routine-bg); }
+  .badge.INVESTIGATE { color: var(--investigate); background: var(--investigate-bg); }
+  .badge.ESCALATE { color: var(--escalate); background: var(--escalate-bg); }
+  .badge.INSUFFICIENT { color: var(--insufficient); background: var(--insufficient-bg); }
+  .score { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: var(--muted); }
+  .summary { margin: 8px 0 16px; }
+
+  .ctx { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted);
+         padding: 10px 12px; background: var(--bg); border-radius: 8px; margin-bottom: 18px; }
+  .ctx b { color: var(--ink); font-weight: 600; }
+
+  h3.section { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;
+               color: var(--muted); margin: 22px 0 10px; font-weight: 600; }
+
+  .finding { border: 1px solid var(--line); border-radius: 8px; padding: 13px 15px; margin-bottom: 11px; }
+  .finding .rule { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px;
+                   font-weight: 650; color: var(--accent); }
+  .finding .conf { float: right; font-size: 12px; color: var(--muted); }
+  .finding p { margin: 8px 0 0; }
+  .finding .label { font-size: 12px; color: var(--muted); display: block; margin-top: 9px; }
+  .chips { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11.5px;
+    padding: 3px 8px; border-radius: 5px; border: 1px solid var(--line);
+    background: var(--bg); cursor: pointer; color: var(--accent);
+  }
+  .chip:hover { border-color: var(--accent); }
+  .txnrow {
+    margin-top: 8px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px;
+    background: var(--bg); border-left: 3px solid var(--accent); padding: 8px 11px; border-radius: 0 6px 6px 0;
+  }
+  .txnrow .miss { color: var(--escalate); }
+
+  .dest { border: 1px solid var(--line); border-radius: 8px; padding: 11px 14px; margin-bottom: 9px; font-size: 14px; }
+  .posture { font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: 0.05em;
+             padding: 2px 7px; border-radius: 4px; margin-left: 7px; }
+  .posture.elevated { color: var(--escalate); background: var(--escalate-bg); }
+  .posture.watch { color: var(--investigate); background: var(--investigate-bg); }
+  .posture.benign { color: var(--routine); background: var(--routine-bg); }
+  .posture.unknown { color: var(--insufficient); background: var(--insufficient-bg); }
+  .cite { font-size: 12px; color: var(--muted); margin-top: 6px; font-family: ui-monospace, Menlo, Consolas, monospace; }
+
+  .narrative { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .narrative ul { margin: 6px 0 0; padding-left: 20px; }
+  .narrative li { margin-bottom: 4px; }
+  .note { font-size: 13px; color: var(--muted); font-style: italic; }
+  .controls { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+  .spin { color: var(--muted); padding: 40px; text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Transaction Risk Investigation</h1>
+  <span class="track">TRACK_ID=PS06</span>
+  <span class="spacer"></span>
+  <label class="controls"><input type="checkbox" id="enrich" checked> AI enrichment</label>
+  <span id="modelstate">checking…</span>
+</header>
+
+<div class="layout">
+  <aside class="panel">
+    <h2>Review queue</h2>
+    <div id="queue"></div>
+  </aside>
+  <main class="panel">
+    <h2>Investigation report</h2>
+    <div id="report" class="empty">Select a customer to review their history.</div>
+  </main>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money = (n) => "$" + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+
+let selected = null;
+const historyCache = {};
+
+async function boot() {
+  try {
+    const h = await (await fetch("/health")).json();
+    $("modelstate").textContent = h.gemini.configured
+      ? `model ${h.gemini.llm_model} · ${h.typology_route}`
+      : `no GEMINI_API_KEY · ${h.typology_route}`;
+  } catch { $("modelstate").textContent = "health check failed"; }
+
+  const data = await (await fetch("/api/customers")).json();
+  $("queue").innerHTML = data.customers.map(c => `
+    <button class="cust" data-id="${c.customer_id}">
+      <span class="id">${esc(c.customer_id)}</span>
+      <span class="meta"> · ${c.transaction_count} txns</span>
+      <div class="meta">${esc(c.first_transaction)} → ${esc(c.last_transaction)}</div>
+    </button>`).join("");
+
+  $("queue").addEventListener("click", (e) => {
+    const btn = e.target.closest(".cust");
+    if (btn) investigate(btn.dataset.id);
+  });
+}
+
+async function investigate(id) {
+  selected = id;
+  document.querySelectorAll(".cust").forEach(b =>
+    b.setAttribute("aria-current", String(b.dataset.id === id)));
+  $("report").className = "spin";
+  $("report").textContent = "Reviewing history…";
+
+  const enrich = $("enrich").checked;
+  try {
+    const [rep, hist] = await Promise.all([
+      fetch(`/api/investigate?customer_id=${encodeURIComponent(id)}&enrich=${enrich}`, {method:"POST"})
+        .then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.detail))),
+      historyCache[id] ? Promise.resolve(historyCache[id])
+        : fetch(`/api/customers/${encodeURIComponent(id)}`).then(r => r.json())
+    ]);
+    historyCache[id] = hist;
+    render(rep, hist);
+  } catch (err) {
+    $("report").className = "empty";
+    $("report").textContent = "Could not complete the review: " + err;
+  }
+}
+
+function verdictLabel(rep) {
+  if (rep.risk_level === "ROUTINE") {
+    return (rep.customer_context && rep.customer_context.maturity === undefined) ? "INSUFFICIENT" : "ROUTINE";
+  }
+  return rep.risk_score >= 0.80 ? "ESCALATE" : "INVESTIGATE";
+}
+
+function render(rep, hist) {
+  const label = verdictLabel(rep);
+  const ctx = rep.customer_context || {};
+  const parts = [];
+
+  parts.push(`<div class="verdict">
+      <span class="badge ${label}">${label}</span>
+      <span class="score">risk ${rep.risk_score.toFixed(2)} · confidence ${rep.analysis_confidence.toFixed(2)}</span>
+    </div>
+    <p class="summary">${esc(rep.summary)}</p>`);
+
+  const bits = Object.entries(ctx).map(([k, v]) =>
+    `<span><b>${esc(k.replace(/_/g," "))}:</b> ${esc(Array.isArray(v) ? v.join(", ") : v)}</span>`);
+  if (bits.length) parts.push(`<div class="ctx">${bits.join("")}</div>`);
+
+  if (rep.findings && rep.findings.length) {
+    parts.push(`<h3 class="section">Findings</h3>`);
+    for (const f of rep.findings) {
+      parts.push(`<div class="finding">
+        <span class="conf">confidence ${f.confidence.toFixed(2)} · weight ${f.rule_weight.toFixed(2)}</span>
+        <span class="rule">${esc(f.rule_triggered)}</span>
+        <p>${esc(f.specific_details)}</p>
+        <span class="label">How it differs from this customer's baseline</span>
+        <p>${esc(f.deviation_from_normal)}</p>
+        <span class="label">Where to start</span>
+        <p>${esc(f.investigator_should_look)}</p>
+        <div class="chips">${f.transactions_involved.map(t =>
+          `<button class="chip" data-txn="${esc(t)}">${esc(t)}</button>`).join("")}</div>
+      </div>`);
+    }
+  } else {
+    parts.push(`<h3 class="section">Findings</h3>
+      <p class="note">None. Every transaction in this history is consistent with the customer's
+      established pattern, and no rule was triggered.</p>`);
+  }
+
+  if (rep.destination_context && rep.destination_context.length) {
+    parts.push(`<h3 class="section">Destination context</h3>`);
+    for (const d of rep.destination_context) {
+      parts.push(`<div class="dest">
+        <b>${esc(d.payee)}</b> <span class="posture ${esc(d.posture)}">${esc(d.posture)}</span>
+        <p>${esc(d.label)} — ${esc(d.why_it_matters)}</p>
+        <p class="note">${esc(d.investigator_note)}</p>
+        <div class="cite">${esc(d.id)} · ${esc(d.source)} · matched by ${esc(d.matched_by)}</div>
+      </div>`);
+    }
+  }
+
+  const n = rep.investigator_narrative;
+  if (n && n.available) {
+    parts.push(`<h3 class="section">Investigator briefing</h3>
+      <div class="narrative">
+        <p><b>${esc(n.headline)}</b></p>
+        <p>${esc(n.assessment)}</p>
+        ${listBlock("Where to start", n.where_to_start)}
+        ${listBlock("What would explain this innocently", n.innocent_explanations)}
+        ${listBlock("Not established by this history", n.not_established)}
+        <div class="cite">Every transaction and payee named above was checked against the findings before display.</div>
+      </div>`);
+  } else if (n && n.reason) {
+    parts.push(`<h3 class="section">Investigator briefing</h3>
+      <p class="note">Not generated — ${esc(n.reason)}. The findings above are unaffected: they are
+      produced by the rules and do not depend on a model.</p>`);
+  }
+
+  $("report").className = "report";
+  $("report").innerHTML = parts.join("");
+
+  $("report").addEventListener("click", (e) => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    const existing = chip.parentElement.parentElement.querySelector(".txnrow");
+    if (existing) existing.remove();
+    const txn = (hist.transactions || []).find(t => t.transaction_id === chip.dataset.txn);
+    const row = document.createElement("div");
+    row.className = "txnrow";
+    row.innerHTML = txn
+      ? `${esc(txn.date)} ${esc(txn.timestamp || "")} · ${esc(txn.payee)} · ${money(txn.amount)}
+         · ${esc(txn.channel)} · ${esc(txn.type)} · ${esc(txn.description || "")}`
+      : `<span class="miss">${esc(chip.dataset.txn)} is not present in the source history.</span>`;
+    chip.parentElement.parentElement.appendChild(row);
+  });
+}
+
+function listBlock(title, items) {
+  if (!items || !items.length) return "";
+  return `<span class="label">${esc(title)}</span>
+    <ul>${items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>`;
+}
+
+boot();
+</script>
+</body>
+</html>

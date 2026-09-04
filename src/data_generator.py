@@ -15,6 +15,8 @@ import random
 from datetime import date, timedelta
 from pathlib import Path
 
+from src.utils import make_transaction_id
+
 SEED = 20240904
 BUSINESS_HOURS = (8, 21)
 
@@ -74,7 +76,18 @@ def build_history(rng, start: date, months: int, salary, recurring, discretionar
 
 
 def finalise(customer_id: str, account_type: str, txns):
+    """
+    Sort the history and stamp each row with its identifier.
+
+    The ids are written into the data itself rather than assigned at load time,
+    so that when a finding cites a transaction the reference can be found in the
+    committed source history by searching for it.
+    """
     txns = sorted(txns, key=lambda t: (t["date"], t["timestamp"]))
+    for index, txn in enumerate(txns):
+        txn["transaction_id"] = make_transaction_id(
+            customer_id, index, txn["date"], txn["payee"], txn["amount"]
+        )
     return {"customer_id": customer_id, "account_type": account_type, "transactions": txns}
 
 
