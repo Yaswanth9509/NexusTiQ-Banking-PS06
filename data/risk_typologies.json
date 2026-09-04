@@ -1,0 +1,260 @@
+{
+  "document": "Destination Typologies for Transaction Review",
+  "version": "1.0",
+  "purpose": "Reference material the investigation assistant works over. Each entry describes a kind of destination money leaves for, and what its presence does or does not imply. Findings that cite a typology cite it by id, so an investigator can read the basis for themselves. A typology describes a category of destination; it never asserts anything about a particular customer.",
+  "typologies": [
+    {
+      "id": "TYP-01",
+      "label": "Virtual asset / cryptocurrency exchange",
+      "posture": "elevated",
+      "description": "Cryptocurrency exchanges, digital asset brokers, coin trading platforms, bitcoin ATMs and virtual currency wallets. Money sent to these becomes difficult to trace or recall once converted.",
+      "why_it_matters": "Funds converted to virtual assets are effectively unrecoverable, which is why accounts taken over by a third party are frequently drained this way. Equally, a great many people buy cryptocurrency for ordinary reasons.",
+      "investigator_note": "Presence alone proves nothing. What matters is whether the customer has done this before, and whether the pace and size fit the rest of their behaviour.",
+      "keywords": [
+        "crypto",
+        "cryptocurrency",
+        "bitcoin",
+        "btc",
+        "ethereum",
+        "coin",
+        "coinbase",
+        "binance",
+        "digital asset",
+        "virtual currency",
+        "blockchain",
+        "token",
+        "wallet",
+        "exchange"
+      ]
+    },
+    {
+      "id": "TYP-02",
+      "label": "Money remittance and international transfer agent",
+      "posture": "elevated",
+      "description": "Remittance agencies, money transfer operators, overseas send services, international wire agents and cross-border payment intermediaries.",
+      "why_it_matters": "Cross-border transfers settle quickly and reverse poorly. They are also the ordinary way that millions of people support family abroad.",
+      "investigator_note": "Look for whether the corridor and recipient are consistent with the customer's history. A first-ever remittance during a wider change of behaviour reads differently from a monthly one.",
+      "keywords": [
+        "remittance",
+        "remit",
+        "overseas",
+        "international",
+        "cross-border",
+        "foreign",
+        "western union",
+        "moneygram",
+        "send agency",
+        "transfer agency",
+        "global send",
+        "swift remit",
+        "rapid transfer"
+      ]
+    },
+    {
+      "id": "TYP-03",
+      "label": "Prepaid card, stored value and gift voucher",
+      "posture": "elevated",
+      "description": "Prepaid card reloads, stored value top-ups, digital wallet loading, gift card and voucher purchases.",
+      "why_it_matters": "Stored value converts account funds into a bearer instrument that leaves no onward trail. It is a common instruction in impersonation and authorised-push-payment scams.",
+      "investigator_note": "Repeated voucher or prepaid purchases in short order, especially alongside instructions the customer cannot explain, are worth a direct conversation with them.",
+      "keywords": [
+        "prepaid",
+        "gift card",
+        "gift voucher",
+        "voucher",
+        "top-up",
+        "topup",
+        "reload",
+        "stored value",
+        "pay card",
+        "scratch card"
+      ]
+    },
+    {
+      "id": "TYP-04",
+      "label": "Online gambling and betting",
+      "posture": "watch",
+      "description": "Betting platforms, online casinos, sportsbooks, gaming and wagering sites.",
+      "why_it_matters": "A sharp rise in gambling spend can indicate financial distress, and gambling accounts are also used to layer funds. Neither inference is safe on its own.",
+      "investigator_note": "Consider trajectory rather than presence: a steady modest spend is a habit, a sudden escalation is a change worth understanding.",
+      "keywords": [
+        "casino",
+        "betting",
+        "bet365",
+        "gambling",
+        "wager",
+        "sportsbook",
+        "poker",
+        "lottery",
+        "bookmaker",
+        "gaming platform"
+      ]
+    },
+    {
+      "id": "TYP-05",
+      "label": "Peer-to-peer and instant transfer service",
+      "posture": "watch",
+      "description": "Peer-to-peer payment applications, instant transfer services and person-to-person money movement platforms.",
+      "why_it_matters": "Instant, irrevocable transfers to individuals are the settlement rail for most social engineering scams, and also how most people split a dinner bill.",
+      "investigator_note": "The recipient matters more than the rail. Transfers to a name that has never appeared before, at unusual hours, deserve a closer look than the channel itself does.",
+      "keywords": [
+        "peer-to-peer",
+        "p2p",
+        "venmo",
+        "zelle",
+        "cash app",
+        "paypal",
+        "quickpay",
+        "instant transfer",
+        "send money",
+        "payment app"
+      ]
+    },
+    {
+      "id": "TYP-06",
+      "label": "Payroll and salary source",
+      "posture": "benign",
+      "description": "Employer payroll deposits, salary credits, wage payments and direct deposits from an employing organisation.",
+      "why_it_matters": "A regular credit from a consistent source is the strongest single indicator that an account is being used normally by its owner.",
+      "investigator_note": "Interruption of a long-standing salary credit is more informative than its presence. Note it if the pattern stops.",
+      "keywords": [
+        "payroll",
+        "salary",
+        "wages",
+        "employer",
+        "direct deposit",
+        "paycheck",
+        "remuneration"
+      ]
+    },
+    {
+      "id": "TYP-07",
+      "label": "Housing: rent and mortgage",
+      "posture": "benign",
+      "description": "Rent payments to a landlord or property manager, mortgage instalments, housing association and letting agency payments.",
+      "why_it_matters": "Housing costs are usually the largest recurring payment an individual makes, and dwarf their median transaction every month without being remarkable.",
+      "investigator_note": "Size alone should never flag a housing payment. A change of destination for one is far more interesting than its amount.",
+      "keywords": [
+        "rent",
+        "landlord",
+        "mortgage",
+        "lease",
+        "leasing",
+        "property",
+        "apartments",
+        "estates",
+        "residences",
+        "lofts",
+        "towers",
+        "housing",
+        "letting",
+        "court",
+        "tenancy"
+      ]
+    },
+    {
+      "id": "TYP-08",
+      "label": "Utilities and recurring household bills",
+      "posture": "benign",
+      "description": "Electricity, gas, water, telecommunications, broadband and municipal service payments on a recurring schedule.",
+      "why_it_matters": "Stable, modest and predictable. Their continued presence through a period of unusual activity suggests the account is still being used by its owner.",
+      "investigator_note": "Useful as a control. If ordinary bills continue uninterrupted alongside suspect activity, an account takeover is a less complete explanation.",
+      "keywords": [
+        "electric",
+        "electricity",
+        "power",
+        "water",
+        "utility",
+        "utilities",
+        "broadband",
+        "internet",
+        "telecom",
+        "municipal",
+        "fiber",
+        "energy"
+      ]
+    },
+    {
+      "id": "TYP-09",
+      "label": "Investment and brokerage",
+      "posture": "benign",
+      "description": "Brokerage accounts, investment platforms, securities purchases, bond funds, retirement and wealth management transfers.",
+      "why_it_matters": "Investment transfers are routinely large and routinely scheduled. A recurring sweep to the same brokerage is a savings habit, not an anomaly.",
+      "investigator_note": "Distinguish a standing arrangement from a first-ever transfer. The former is a plan; the latter, if large and unheralded, may not be the customer's own.",
+      "keywords": [
+        "brokerage",
+        "broker",
+        "investment",
+        "securities",
+        "bond",
+        "mutual fund",
+        "wealth",
+        "retirement",
+        "advisory",
+        "portfolio",
+        "asset management"
+      ]
+    },
+    {
+      "id": "TYP-10",
+      "label": "Everyday retail and groceries",
+      "posture": "benign",
+      "description": "Supermarkets, grocery stores, general retailers, pharmacies, fuel stations, coffee shops and restaurants.",
+      "why_it_matters": "The texture of ordinary life. These form the bulk of a typical customer's history and define what normal looks like for them.",
+      "investigator_note": "Their disappearance from a recent window is as notable as anything new appearing in it.",
+      "keywords": [
+        "grocery",
+        "groceries",
+        "supermarket",
+        "market",
+        "store",
+        "pharmacy",
+        "chemist",
+        "fuel",
+        "petrol",
+        "gas station",
+        "coffee",
+        "cafe",
+        "restaurant",
+        "retail",
+        "foods",
+        "shop",
+        "shopping",
+        "dining",
+        "takeaway",
+        "transit"
+      ]
+    },
+    {
+      "id": "TYP-11",
+      "label": "Subscription and digital services",
+      "posture": "benign",
+      "description": "Streaming services, software subscriptions, cloud services, membership fees and recurring digital billing.",
+      "why_it_matters": "Small, fixed and repeating. They anchor the low end of a customer's amount distribution.",
+      "investigator_note": "Rarely relevant on their own. Continued subscription billing suggests the account holder's own devices are still in use.",
+      "keywords": [
+        "subscription",
+        "streaming",
+        "netflix",
+        "spotify",
+        "membership",
+        "cloud",
+        "software",
+        "saas",
+        "gym",
+        "fitness",
+        "monthly plan"
+      ]
+    },
+    {
+      "id": "TYP-12",
+      "label": "Unclassified destination",
+      "posture": "unknown",
+      "description": "A destination that does not resemble any documented category - an unfamiliar company name, an individual, or a counterparty whose nature cannot be determined from the record.",
+      "why_it_matters": "An unrecognised destination is not a suspicious one. It is a gap in what the record can tell us, and should be reported as a gap.",
+      "investigator_note": "State plainly that the destination could not be characterised, rather than inferring a category from the name.",
+      "keywords": []
+    }
+  ],
+  "matching_note": "Keywords anchor the offline matching route. The embedding route uses the label and description text instead; both draw on this same document."
+}

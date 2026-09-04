@@ -78,16 +78,7 @@ class UnusuallyLargeTransferRule(RiskRule):
 
         largest = max(flagged, key=lambda t: t.amount)
         multiple = largest.amount / profile.median_debit_amount if profile.median_debit_amount else 0
-        prior_count = sum(1 for t in debit_txns if t.payee == largest.payee and t is not largest)
-
-        if prior_count == 0:
-            payee_note = f"'{largest.payee}' has received no other payment in this history"
-        else:
-            prior_max = max(t.amount for t in debit_txns
-                            if t.payee == largest.payee and t is not largest)
-            payee_note = (
-                f"the {prior_count} previous payment(s) to '{largest.payee}' peaked at ${prior_max:,.2f}"
-            )
+        payee_note, guidance = self._describe_payee_history(largest, debit_txns)
 
         return Finding(
             rule_triggered=self.name,
@@ -102,12 +93,49 @@ class UnusuallyLargeTransferRule(RiskRule):
                 f"${profile.median_debit_amount:,.2f} (threshold ${threshold:,.2f}), and "
                 f"{payee_note}"
             ),
-            investigator_should_look=(
-                f"Establish what the ${largest.amount:,.2f} to '{largest.payee}' was for and "
-                f"whether the customer initiated it. Payments of this size to a destination "
-                f"with no matching history are the ones worth a call."
-            ),
+            investigator_should_look=guidance,
             confidence=0.90 if profile.maturity_level == "ESTABLISHED" else 0.70,
+        )
+
+    def _describe_payee_history(self, txn: Transaction, debit_txns: List[Transaction]):
+        """
+        Describe what the customer has previously sent this payee, and say what
+        that means for the investigator.
+
+        The distinction that matters is between a payee with a genuine past and
+        one whose only other payments arrived alongside this one. Reporting the
+        second as "2 previous payments" would imply a history that does not
+        exist.
+        """
+        siblings = [t for t in debit_txns if t.payee == txn.payee and t is not txn]
+
+        if not siblings:
+            return (
+                f"'{txn.payee}' has received no other payment in this history",
+                f"Establish what the ${txn.amount:,.2f} to '{txn.payee}' was for and whether "
+                f"the customer set it up themselves. A payment this size to a destination that "
+                f"appears once and never again is the kind worth a call.",
+            )
+
+        dates = sorted(datetime.strptime(t.date, "%Y-%m-%d") for t in siblings + [txn])
+        span = (dates[-1] - dates[0]).days
+        prior_max = max(t.amount for t in siblings)
+
+        if span < self.RELATIONSHIP_MIN_DAYS:
+            return (
+                f"the only other payments to '{txn.payee}' were {len(siblings)} more in the same "
+                f"{span}-day period (largest ${prior_max:,.2f}), so there is no standing "
+                f"arrangement behind them",
+                f"Treat the ${txn.amount:,.2f} as one leg of a short sequence to '{txn.payee}' "
+                f"rather than in isolation. Confirm with the customer that they set this payee up "
+                f"and intended the full amount that left.",
+            )
+
+        return (
+            f"previous payments to '{txn.payee}' span {span} days and peaked at "
+            f"${prior_max:,.2f}, well under this one",
+            f"The customer does pay '{txn.payee}' regularly, so the question is the size rather "
+            f"than the destination. Check what made this instalment larger than the others.",
         )
 
     def _is_routine_for_payee(

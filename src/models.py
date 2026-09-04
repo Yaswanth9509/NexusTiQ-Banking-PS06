@@ -78,3 +78,11 @@ class InvestigationReport(BaseModel):
     timestamp: datetime
     source_customer_id: str
     analysis_confidence: float
+
+    # --- Enrichment from the AI layer -------------------------------------
+    # Everything below is additive. The risk level, the score and the findings
+    # above are fixed by the rules before any model is consulted, and a report
+    # is complete and valid with all three of these absent.
+    destination_context: Optional[List[dict]] = None
+    investigator_narrative: Optional[dict] = None
+    ai_status: Optional[dict] = None
