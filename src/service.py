@@ -40,7 +40,11 @@ class InvestigationService:
     async def prepare(self) -> None:
         """Warm anything that needs warming, at startup rather than per request."""
         if self.matcher is not None:
-            self.typology_route = await self.matcher.prepare()
+            try:
+                self.typology_route = await self.matcher.prepare()
+            except Exception:
+                log.exception("Typology preparation failed; matching will be unavailable")
+                self.typology_route = "unavailable (preparation failed)"
             log.info("Typology matching route: %s", self.typology_route)
 
     async def investigate(self, history: CustomerHistory, enrich: bool = True) -> InvestigationReport:

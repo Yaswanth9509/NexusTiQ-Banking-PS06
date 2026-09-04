@@ -85,7 +85,15 @@ class TypologyMatcher:
         if self.client is None or not self.client.is_configured:
             return "keyword matching (no API key configured)"
 
-        vectors = await self.client.embed([self._corpus_text(t) for t in self.typologies])
+        # The client is contracted not to raise, but startup is the one place
+        # where trusting that would cost the whole application rather than one
+        # request, so it is enforced here as well.
+        try:
+            vectors = await self.client.embed([self._corpus_text(t) for t in self.typologies])
+        except Exception:
+            log.exception("Embedding the typologies failed; falling back to keyword matching")
+            return "keyword matching (embedding call raised)"
+
         if vectors is None:
             return "keyword matching (embedding call failed)"
 
@@ -151,7 +159,11 @@ class TypologyMatcher:
             return []
 
         if self.vectors is not None and self.client is not None and self.client.is_configured:
-            matched = await self._match_by_embedding(destinations)
+            try:
+                matched = await self._match_by_embedding(destinations)
+            except Exception:
+                log.exception("Embedding match failed; falling back to keyword matching")
+                matched = None
             if matched is not None:
                 return matched
 
