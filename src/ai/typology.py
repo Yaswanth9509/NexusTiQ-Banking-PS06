@@ -44,8 +44,11 @@ SIMILARITY_FLOOR = 0.62
 class TypologyMatcher:
     """Matches a destination against the documented typologies."""
 
-    def __init__(self, client=None):
+    def __init__(self, client=None, index_path: Optional[Path] = None):
         self.client = client
+        # Injectable so tests never write a cache into the repository's data
+        # directory. A test once did, and a fabricated index was committed.
+        self.index_path = index_path or INDEX_PATH
         self.typologies: List[Dict[str, Any]] = []
         self.vectors: Optional[np.ndarray] = None
         self.vector_ids: List[str] = []
@@ -103,10 +106,10 @@ class TypologyMatcher:
         return "embeddings (index built at startup)"
 
     def _load_cached_index(self) -> bool:
-        if not INDEX_PATH.exists():
+        if not self.index_path.exists():
             return False
         try:
-            cached = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+            cached = json.loads(self.index_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             return False
 
@@ -126,7 +129,7 @@ class TypologyMatcher:
     def _write_cached_index(self, vectors: List[List[float]]) -> None:
         """Persist the index so later startups need no network call at all."""
         try:
-            INDEX_PATH.write_text(
+            self.index_path.write_text(
                 json.dumps(
                     {
                         "model": self.client.embedding_model,
@@ -180,6 +183,19 @@ class TypologyMatcher:
         try:
             query_matrix = self._normalise(np.array(vectors, dtype=np.float32))
         except ValueError:
+            return None
+
+        # A cached index built by a different embedding model - or by anything
+        # other than the real one - has the wrong width. Comparing against it
+        # would either raise here or, worse, produce confident nonsense, so a
+        # mismatch discards the index and drops to keyword matching.
+        if query_matrix.shape[1] != self.vectors.shape[1]:
+            log.warning(
+                "Cached index has %d dimensions but the model returns %d; discarding it",
+                self.vectors.shape[1], query_matrix.shape[1],
+            )
+            self.vectors = None
+            self.vector_ids = []
             return None
 
         similarities = query_matrix @ self.vectors.T

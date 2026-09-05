@@ -32,6 +32,19 @@ def histories(sample_records):
     return {cid: CustomerHistory(**record) for cid, record in sample_records.items()}
 
 
+@pytest.fixture(autouse=True)
+def isolated_index(tmp_path, monkeypatch):
+    """
+    Point the typology index at a temporary file for every test.
+
+    Without this a test that builds an index writes it into the repository's
+    data directory, where it both leaks into later tests and can be committed.
+    That happened once: a fabricated index of 8-dimensional vectors reached the
+    repository and would have been loaded in preference to a real one.
+    """
+    monkeypatch.setattr("src.ai.typology.INDEX_PATH", tmp_path / "typology_index.json")
+
+
 @pytest.fixture
 def analyzer():
     return TransactionAnalyzer(

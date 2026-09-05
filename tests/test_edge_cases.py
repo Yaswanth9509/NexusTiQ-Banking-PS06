@@ -327,3 +327,46 @@ class TestApiEconomy:
     def test_output_length_is_capped(self):
         from src.ai.client import MAX_OUTPUT_TOKENS
         assert MAX_OUTPUT_TOKENS <= 1000, "an unbounded reply is the expensive half of a call"
+
+
+class TestIndexIntegrity:
+    """A cached index must be trusted only when it actually fits the model."""
+
+    def test_an_index_of_the_wrong_width_is_discarded(self, analyzer, tmp_path):
+        """
+        A stale or fabricated index has vectors of the wrong dimensionality.
+        Using it would produce confident nonsense, so it must be dropped.
+        """
+        index = tmp_path / "index.json"
+        matcher = TypologyMatcher(None, index_path=index)
+        index.write_text(json.dumps({
+            "model": "gemini-embedding-001",
+            "typology_ids": [t["id"] for t in matcher.typologies],
+            "vectors": [[0.1] * 8 for _ in matcher.typologies],   # far too narrow
+        }), encoding="utf-8")
+
+        class RealWidth(GeminiClient):
+            async def _post(self, path, body):
+                return {"embeddings": [{"values": [0.1] * 768}
+                                       for _ in body["requests"]]}
+
+        client = RealWidth(api_key="test-key")
+        matcher = TypologyMatcher(client, index_path=index)
+        assert run(matcher.prepare()) == "embeddings (cached index)"
+
+        result = run(matcher.match([{"payee": "CryptoExchange XYZ", "description": "Wire"}]))
+
+        assert result[0]["id"] == "TYP-01", "must still answer, via the keyword route"
+        assert "keyword" in result[0]["matched_by"]
+        assert matcher.vectors is None, "the bad index should have been discarded"
+
+    def test_a_stale_index_is_rejected_when_typologies_change(self, tmp_path):
+        index = tmp_path / "index.json"
+        index.write_text(json.dumps({
+            "model": "gemini-embedding-001",
+            "typology_ids": ["TYP-01", "TYP-02"],       # far fewer than the document
+            "vectors": [[0.1] * 768, [0.2] * 768],
+        }), encoding="utf-8")
+
+        matcher = TypologyMatcher(GeminiClient(api_key=""), index_path=index)
+        assert "keyword" in run(matcher.prepare())
