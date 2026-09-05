@@ -88,6 +88,15 @@ observation, `PATTERN_BREAK` is withheld — it compares a customer against thei
 own past, and there is not yet a past to compare to — and the large-transfer
 threshold loosens from 2.5x to 3.5x.
 
+### How the findings connect
+
+When more than one rule fires, the report says how the findings relate. Three
+findings resting on the same three transfers to the same payee is one episode
+seen from three angles, not three separate problems, and reading it the other
+way overstates what the customer did. Findings that touch disjoint transactions
+are reported as distinct concerns instead. The overlap names which rules share
+each transaction.
+
 ### What comes back
 
 `risk_level` is one of **ROUTINE**, **INVESTIGATE** or **ESCALATE**. The top band
@@ -195,6 +204,22 @@ it is the easier mistake to make.
 `data/risk_typologies.json` is the second document the system works over: twelve
 categories of destination, what each implies, and — deliberately — what it does
 not.
+
+---
+
+## Where this departs from the brief
+
+**Repetition alone is not treated as suspicious.** The specification's edge-case
+list suggests that a customer with fifty identical transfers should return
+INVESTIGATE on a pattern break. This system returns ROUTINE. Twenty identical
+ACH payments to one payee across five months is a standing order — rent, a loan,
+a subscription — and flagging it is exactly the over-flagging the problem
+statement warns against. A repeated payment becomes interesting when it goes
+somewhere new or changes shape, and both of those are already covered.
+
+**Amounts must be positive and dates readable.** Both are refused at the
+boundary with a message naming the offending row, rather than carried into the
+rules to distort a median or fail somewhere less legible. The API returns 422.
 
 ---
 

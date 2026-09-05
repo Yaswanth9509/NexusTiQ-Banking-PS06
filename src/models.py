@@ -18,7 +18,7 @@ class Transaction(BaseModel):
 
     date: str                                   # "YYYY-MM-DD" (mandatory)
     payee: str                                  # Entity receiving/sending money
-    amount: float                               # Positive number
+    amount: float = Field(ge=0)                 # Positive; direction is in transaction_type
     channel: str                                # "Debit Card", "ACH", "Wire", "Online", ...
     transaction_type: str = Field(alias="type")  # "debit" (outflow) or "credit" (inflow)
     description: str = ""                       # Free-text label; optional in source data
@@ -34,6 +34,26 @@ class CustomerHistory(BaseModel):
     customer_id: str
     account_type: str
     transactions: List[Transaction]
+
+    @model_validator(mode="after")
+    def _check_dates_are_parseable(self):
+        """
+        Reject a malformed date rather than carrying it into the analysis.
+
+        Every rule reasons over time - windows, spans, ordering - so a date that
+        cannot be read is not a field the system can shrug off. Failing here
+        gives the caller a clear 422 naming the row, instead of a stack trace
+        from somewhere deep in a rule.
+        """
+        for index, txn in enumerate(self.transactions):
+            try:
+                datetime.strptime(txn.date, "%Y-%m-%d")
+            except (ValueError, TypeError):
+                raise ValueError(
+                    f"transaction {index} has an unreadable date {txn.date!r}; "
+                    f"expected YYYY-MM-DD"
+                )
+        return self
 
     @model_validator(mode="after")
     def _assign_transaction_ids(self):
@@ -89,6 +109,7 @@ class InvestigationReport(BaseModel):
     risk_score: float
     summary: str
     findings: Optional[List[Finding]] = None
+    how_findings_connect: Optional[dict] = None
     customer_context: Optional[dict] = None
     recommendation: str
     timestamp: datetime

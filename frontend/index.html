@@ -61,6 +61,24 @@
   .cust[aria-current="true"] { background: color-mix(in srgb, var(--accent) 12%, transparent); }
   .cust .id { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; }
   .cust .meta { font-size: 12px; color: var(--muted); }
+  /* A dot appears once a customer has been reviewed, so the queue itself shows
+     what has been looked at and what it came back as. */
+  .dot { float: right; width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; }
+  .dot.ROUTINE { background: var(--routine); }
+  .dot.INVESTIGATE { background: var(--investigate); }
+  .dot.ESCALATE { background: var(--escalate); }
+  .dot.INSUFFICIENT { background: var(--insufficient); }
+  .dot.pending { background: var(--line); }
+
+  .connect {
+    border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 12px 15px; margin-bottom: 14px;
+    background: color-mix(in srgb, var(--accent) 4%, transparent);
+  }
+  .connect p { margin: 0; }
+  .overlap { margin-top: 9px; font-size: 12.5px; font-family: ui-monospace, Menlo, Consolas, monospace; }
+  .overlap div { margin-top: 3px; color: var(--muted); }
+  .overlap b { color: var(--ink); font-weight: 600; }
 
   .report { padding: 18px; }
   .empty { padding: 48px 20px; text-align: center; color: var(--muted); }
@@ -159,6 +177,7 @@ async function boot() {
   const data = await (await fetch("/api/customers")).json();
   $("queue").innerHTML = data.customers.map(c => `
     <button class="cust" data-id="${c.customer_id}">
+      <span class="dot pending" data-dot="${c.customer_id}" title="not yet reviewed"></span>
       <span class="id">${esc(c.customer_id)}</span>
       <span class="meta"> · ${c.transaction_count} txns</span>
       <div class="meta">${esc(c.first_transaction)} → ${esc(c.last_transaction)}</div>
@@ -186,6 +205,12 @@ async function investigate(id) {
         : fetch(`/api/customers/${encodeURIComponent(id)}`).then(r => r.json())
     ]);
     historyCache[id] = hist;
+    const dot = document.querySelector(`[data-dot="${id}"]`);
+    if (dot) {
+      const label = verdictLabel(rep);
+      dot.className = "dot " + label;
+      dot.title = `${label} · risk ${rep.risk_score.toFixed(2)}`;
+    }
     render(rep, hist);
   } catch (err) {
     $("report").className = "empty";
@@ -238,6 +263,17 @@ function render(rep, hist) {
     parts.push(`<h3 class="section">Findings</h3>
       <p class="note">None. Every transaction in this history is consistent with the customer's
       established pattern, and no rule was triggered.</p>`);
+  }
+
+  const link = rep.how_findings_connect;
+  if (link) {
+    const overlap = Object.entries(link.transactions_triggering_multiple_rules || {});
+    parts.push(`<h3 class="section">How these findings connect</h3>
+      <div class="connect">
+        <p>${esc(link.assessment)}</p>
+        ${overlap.length ? `<div class="overlap">${overlap.map(([t, rules]) =>
+          `<div><b>${esc(t)}</b> → ${esc(rules.join(", "))}</div>`).join("")}</div>` : ""}
+      </div>`);
   }
 
   if (rep.destination_context && rep.destination_context.length) {

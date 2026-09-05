@@ -199,3 +199,65 @@ class TestGrounding:
         }
         assert [t.transaction_id for t in CustomerHistory(**stripped).transactions] == \
                [t["transaction_id"] for t in record["transactions"]]
+
+
+class TestHowFindingsConnect:
+    """
+    The problem statement asks the report to lay out the transactions involved
+    "and how they connect". Three findings on the same three transfers is one
+    episode, not three problems, and reading it the other way overstates what
+    the customer did.
+    """
+
+    def test_findings_on_the_same_payee_are_reported_as_one_episode(self, analyzer, histories):
+        report = run(analyzer.analyze(histories["CUST_009"]))
+        connect = report.how_findings_connect
+
+        assert connect is not None
+        assert "single episode" in connect["assessment"]
+        assert connect["payees_involved"] == ["Vantage Holdings Ltd"]
+        assert connect["transactions_triggering_multiple_rules"]
+
+    def test_the_overlap_names_which_rules_share_each_transaction(self, analyzer, histories):
+        report = run(analyzer.analyze(histories["CUST_009"]))
+        shared = report.how_findings_connect["transactions_triggering_multiple_rules"]
+
+        source_ids = {t.transaction_id for t in histories["CUST_009"].transactions}
+        for txn_id, rules in shared.items():
+            assert txn_id in source_ids, "the overlap must cite real transactions"
+            assert len(rules) > 1, "only genuinely shared transactions belong here"
+            assert len(set(rules)) == len(rules), "a rule should not be listed twice"
+
+    def test_a_single_finding_has_nothing_to_connect(self, analyzer, histories):
+        report = run(analyzer.analyze(histories["CUST_004"]))
+        assert len(report.findings) == 1
+        assert report.how_findings_connect is None
+
+    def test_a_clean_report_has_nothing_to_connect(self, analyzer, histories):
+        report = run(analyzer.analyze(histories["CUST_001"]))
+        assert report.findings is None
+        assert report.how_findings_connect is None
+
+    def test_disjoint_findings_are_reported_as_separate_concerns(self, analyzer):
+        """Findings that share no transactions must not be described as one episode."""
+        from src.models import Finding
+
+        history = make_history(rows=routine_rows())
+        ids = [t.transaction_id for t in history.transactions]
+
+        def finding(rule, txns):
+            return Finding(
+                rule_triggered=rule, rule_weight=0.3, transactions_involved=txns,
+                specific_details="d", deviation_from_normal="d",
+                investigator_should_look="d", confidence=0.9,
+            )
+
+        connect = analyzer._describe_connections(
+            [finding("RULE_A", [ids[0]]), finding("RULE_B", [ids[-1]])],
+            history.transactions,
+        )
+        assert connect["transactions_triggering_multiple_rules"] == {}
+        assert "single episode" not in connect["assessment"], (
+            "findings sharing no transactions must not be described as one episode"
+        )
+        assert "distinct" in connect["assessment"]

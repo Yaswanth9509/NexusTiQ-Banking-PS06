@@ -431,3 +431,55 @@ class TestMatchingPrecedence:
         result = run(matcher.match([{"payee": "Quorix Holdings", "description": ""}]))
         assert result[0]["id"] == "TYP-12"
         assert "no clear typology" in result[0]["matched_by"]
+
+
+class TestInputValidation:
+    """
+    Malformed input is refused at the boundary with a message naming the row,
+    rather than carried into the rules to fail somewhere less legible.
+    """
+
+    def test_a_negative_amount_is_refused(self):
+        from pydantic import ValidationError
+        with pytest.raises(ValidationError):
+            Transaction(date="2024-01-01", payee="X", amount=-50.0,
+                        channel="ACH", type="debit")
+
+    def test_an_unreadable_date_is_refused_naming_the_row(self):
+        from pydantic import ValidationError
+        with pytest.raises(ValidationError) as excinfo:
+            CustomerHistory(customer_id="C", account_type="Checking", transactions=[
+                Transaction(date="2024-01-01", payee="X", amount=10.0, channel="ACH", type="debit"),
+                Transaction(date="last Tuesday", payee="Y", amount=20.0, channel="ACH", type="debit"),
+            ])
+        message = str(excinfo.value)
+        assert "transaction 1" in message, "the message should say which row is wrong"
+        assert "last Tuesday" in message
+
+    def test_a_zero_amount_is_allowed(self):
+        """Adjustments and reversals legitimately post as zero."""
+        txn = Transaction(date="2024-01-01", payee="Adjustment", amount=0.0,
+                          channel="ACH", type="debit")
+        assert txn.amount == 0.0
+
+    def test_unusual_but_valid_payees_are_accepted(self, analyzer):
+        """A name is data, not a format. Unicode and long names must pass through."""
+        rows = routine_rows() + [
+            ("2024-05-29", "Café Münchën 東京", 80.00, "Debit Card", "debit"),
+            ("2024-05-30", "X" * 300, 80.00, "Debit Card", "debit"),
+        ]
+        report = run(analyzer.analyze(make_history(rows=rows)))
+        assert report.risk_level in {"ROUTINE", "INVESTIGATE", "ESCALATE"}
+
+    def test_the_api_turns_a_bad_history_into_422_not_500(self):
+        """A caller sending nonsense should be told what is wrong, not see a crash."""
+        from fastapi.testclient import TestClient
+        import app as application
+
+        with TestClient(application.app) as client:
+            response = client.post("/api/investigate/custom", json={
+                "customer_id": "C", "account_type": "Checking",
+                "transactions": [{"date": "nope", "payee": "X", "amount": 10.0,
+                                  "channel": "ACH", "type": "debit"}],
+            })
+            assert response.status_code == 422

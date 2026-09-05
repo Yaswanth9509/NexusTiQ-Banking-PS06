@@ -97,6 +97,9 @@ class TransactionAnalyzer:
                 risk_score=risk_score,
                 summary=f"Detected {len(findings)} risk signal(s) - {', '.join([f.rule_triggered for f in findings])}",
                 findings=findings,
+                how_findings_connect=self._describe_connections(
+                    findings, customer_history.transactions
+                ),
                 customer_context={
                     "maturity": profile.maturity_level,
                     "transaction_count": len(customer_history.transactions),
@@ -130,6 +133,68 @@ class TransactionAnalyzer:
             )
 
         return report
+
+    def _describe_connections(
+        self, findings: List[Finding], transactions: List[Transaction]
+    ) -> Optional[dict]:
+        """
+        State how the findings relate to one another.
+
+        Listing three findings without saying they concern the same three
+        transfers invites an investigator to read one episode as three separate
+        problems - which is a materially worse account of the customer than the
+        truth. Conversely, findings that touch disjoint transactions really are
+        separate concerns and should be read that way.
+        """
+        if len(findings) < 2:
+            return None
+
+        by_id = {t.transaction_id: t for t in transactions}
+        cited_by = {}
+        for finding in findings:
+            for txn_id in finding.transactions_involved:
+                cited_by.setdefault(txn_id, []).append(finding.rule_triggered)
+
+        shared = {tid: rules for tid, rules in cited_by.items() if len(rules) > 1}
+
+        involved = [by_id[tid] for tid in cited_by if tid in by_id]
+        payees = sorted({t.payee for t in involved})
+        dates = sorted(t.date for t in involved)
+        window = f"{dates[0]} to {dates[-1]}" if dates else "unknown"
+
+        if not shared:
+            statement = (
+                f"The {len(findings)} findings rest on separate transactions and should be "
+                f"read as distinct concerns rather than one episode. Between them they "
+                f"involve {len(cited_by)} transactions to {len(payees)} payee(s), {window}."
+            )
+        elif len(payees) == 1:
+            statement = (
+                f"All {len(findings)} findings describe the same activity: "
+                f"{len(cited_by)} transaction(s) to '{payees[0]}' between {window}. "
+                f"{len(shared)} of those transaction(s) triggered more than one rule, so this "
+                f"is a single episode seen from several angles rather than {len(findings)} "
+                f"separate problems."
+            )
+        else:
+            # Built outside the f-string: nesting quotes of the same kind inside
+            # one is a 3.12 feature, and this has to run on 3.11.
+            payee_list = ", ".join("'" + p + "'" for p in payees)
+            statement = (
+                f"The findings overlap: {len(shared)} transaction(s) triggered more than one "
+                f"rule. Together they cover {len(cited_by)} transactions to "
+                f"{payee_list}, {window}."
+            )
+
+        return {
+            "assessment": statement,
+            "transactions_triggering_multiple_rules": {
+                tid: rules for tid, rules in sorted(shared.items())
+            },
+            "payees_involved": payees,
+            "window": window,
+            "total_transactions_cited": len(cited_by),
+        }
 
     def build_customer_profile(
         self, customer_history: CustomerHistory
