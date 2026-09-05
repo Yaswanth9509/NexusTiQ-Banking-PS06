@@ -1,0 +1,9 @@
+# Normalise line endings in the repository regardless of the platform a
+# contributor checks out on. The first line of README.md is matched exactly by
+# the judging process, and a stray carriage return from a Windows checkout
+# would be part of that string.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.pdf binary
