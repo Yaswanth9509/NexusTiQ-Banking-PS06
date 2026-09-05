@@ -354,11 +354,12 @@ class TestIndexIntegrity:
         matcher = TypologyMatcher(client, index_path=index)
         assert run(matcher.prepare()) == "embeddings (cached index)"
 
-        result = run(matcher.match([{"payee": "CryptoExchange XYZ", "description": "Wire"}]))
+        # A name no keyword anchor covers, so the embedding path is the one
+        # reached and the width guard is actually exercised.
+        result = run(matcher.match([{"payee": "Quorix Holdings", "description": ""}]))
 
-        assert result[0]["id"] == "TYP-01", "must still answer, via the keyword route"
-        assert "keyword" in result[0]["matched_by"]
-        assert matcher.vectors is None, "the bad index should have been discarded"
+        assert matcher.vectors is None, "the mismatched index should have been discarded"
+        assert result[0]["id"] == "TYP-12", "an unmatchable name stays unclassified"
 
     def test_a_stale_index_is_rejected_when_typologies_change(self, tmp_path):
         index = tmp_path / "index.json"
@@ -370,3 +371,63 @@ class TestIndexIntegrity:
 
         matcher = TypologyMatcher(GeminiClient(api_key=""), index_path=index)
         assert "keyword" in run(matcher.prepare())
+
+
+class TestMatchingPrecedence:
+    """Anchors first, embeddings for the remainder - and never a guess."""
+
+    def test_keyword_anchors_are_consulted_before_embeddings(self):
+        """
+        Measured against the live model the anchors were the stronger signal:
+        they classified every covered destination correctly, while embeddings
+        put a cryptocurrency exchange under subscriptions. Anchors therefore
+        take precedence and the model only sees what they miss.
+        """
+        embedded = []
+
+        class Recording(GeminiClient):
+            async def _post(self, path, body):
+                embedded.extend(r["content"]["parts"][0]["text"] for r in body["requests"])
+                return {"embeddings": [{"values": [0.1] * 768} for _ in body["requests"]]}
+
+        client = Recording(api_key="test-key")
+        matcher = TypologyMatcher(client)
+        matcher.vectors = __import__("numpy").ones((12, 768), dtype="float32")
+        matcher.vector_ids = [t["id"] for t in matcher.typologies]
+
+        results = run(matcher.match([
+            {"payee": "CryptoExchange XYZ", "description": "Wire"},   # anchored
+            {"payee": "Quorix Holdings", "description": ""},          # not anchored
+        ]))
+
+        assert results[0]["id"] == "TYP-01"
+        assert "keyword" in results[0]["matched_by"]
+        assert not any("CryptoExchange" in text for text in embedded), (
+            "an anchored destination should never reach the model"
+        )
+        assert any("Quorix" in text for text in embedded), (
+            "an unanchored destination should fall through to embeddings"
+        )
+
+    def test_a_near_tie_between_typologies_is_not_resolved_by_guessing(self):
+        """
+        Absolute similarity could not separate real destinations from invented
+        ones - the ranges overlapped - so a winner that barely leads the
+        runner-up is reported as no match rather than as the winner.
+        """
+        import numpy as np
+
+        class Tied(GeminiClient):
+            async def _post(self, path, body):
+                return {"embeddings": [{"values": [1.0] + [0.0] * 767}
+                                       for _ in body["requests"]]}
+
+        client = Tied(api_key="test-key")
+        matcher = TypologyMatcher(client)
+        # Every typology sits at almost exactly the same distance.
+        matcher.vectors = matcher._normalise(np.ones((12, 768), dtype="float32"))
+        matcher.vector_ids = [t["id"] for t in matcher.typologies]
+
+        result = run(matcher.match([{"payee": "Quorix Holdings", "description": ""}]))
+        assert result[0]["id"] == "TYP-12"
+        assert "no clear typology" in result[0]["matched_by"]

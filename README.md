@@ -106,6 +106,20 @@ to judge returns ROUTINE with the reason stated and a low confidence, because
   with the typology id they matched, so the basis can be read rather than
   trusted. A destination resembling nothing documented is reported as
   unclassified, not pushed into the nearest category.
+
+  Keyword anchors are consulted before embeddings, which is the opposite of how
+  this was first built. Measured against the live model, the anchors classified
+  every destination they covered correctly while the embeddings placed a
+  cryptocurrency exchange under subscriptions — and absolute cosine similarity
+  could not separate real destinations (0.547–0.584) from invented company names
+  (0.512–0.559) at all, because those ranges overlap. What does separate them is
+  the *margin* over the runner-up: something that genuinely belongs to a
+  category beats second place clearly, while a meaningless name sits
+  near-equidistant from everything. So the anchors carry what a fraud desk
+  already knows, embeddings generalise to names nobody listed, and a near-tie is
+  reported as no match rather than resolved by guessing. Across 30 destinations
+  that yields no false classifications; the failure mode is an honest "could not
+  characterise this", which is the safe direction.
 - The model's briefing note is checked before it is shown: every transaction id
   and payee it mentions must appear in the findings it was given. A note that
   cites anything else is discarded whole rather than repaired, because a
