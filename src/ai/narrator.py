@@ -113,9 +113,20 @@ def build_prompt(
 
     if typology_notes:
         lines.extend(["", "DESTINATION REFERENCE (from the bank's typology document)"])
+        # Grouped by typology rather than listed per payee. A pattern break can
+        # cite nine destinations that fall into three categories, and repeating
+        # each category's prose once per payee triples the prompt to say the
+        # same thing.
+        grouped: Dict[str, Dict[str, Any]] = {}
         for note in typology_notes:
+            entry = grouped.setdefault(note["id"], {"note": note, "payees": []})
+            entry["payees"].append(note["payee"])
+
+        for entry in grouped.values():
+            note = entry["note"]
+            payees = ", ".join(f"'{p}'" for p in entry["payees"])
             lines.append(
-                f"- '{note['payee']}' resembles {note['label']} [{note['id']}], "
+                f"- {payees} resemble(s) {note['label']} [{note['id']}], "
                 f"posture {note['posture']}: {note['why_it_matters']}"
             )
 

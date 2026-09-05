@@ -112,6 +112,44 @@ to judge returns ROUTINE with the reason stated and a low confidence, because
   briefing referring to a transaction that does not exist reads exactly as
   authoritative as a correct one.
 
+### What it costs to run
+
+A clean history costs nothing at all: with no findings there is nothing to
+enrich, so no model is called. A flagged one costs two calls — one batch of
+embeddings for the destinations, one generation for the briefing note — on
+prompts of roughly 260 to 500 tokens.
+
+Four things keep that down:
+
+- **The typology index is built once and cached to disk.** Committed, so a
+  judge's first startup makes no embedding call either.
+- **Identical requests are served from memory.** Reviewing the same customer
+  five times costs one set of calls, not five — which is what a demo does, and
+  what an investigator does returning to a case.
+- **Embeddings are cached per destination, not per batch.** The same exchange
+  or remittance agent recurs across customers and is embedded once.
+- **Destination references are grouped by typology in the prompt.** A pattern
+  break citing nine payees across three categories stated each category's prose
+  nine times; grouping cut that prompt from 841 tokens to 484.
+
+`GET /health` reports `calls_made` and `cache_hits` so the effect is visible
+rather than asserted.
+
+### Checking the live integration
+
+Every AI test breaks the model deliberately — absent key, raising client,
+fabricated response, hanging call — because those are the paths that must not
+take the report down with them. What tests cannot confirm is that the request
+shapes and model name are right, since a wrong model name and an unreachable
+network fail identically from inside the application.
+
+```bash
+python scripts/verify_gemini.py
+```
+
+checks each piece against the live API, lists the model names the key can
+actually see if one is wrong, and writes the typology index.
+
 ---
 
 ## The data

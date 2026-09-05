@@ -12,9 +12,11 @@ rate limit and a malformed response are all the same thing to the caller: no
 enrichment available this time.
 """
 
+import hashlib
 import json
 import logging
 import os
+from collections import OrderedDict
 from typing import Any, Dict, List, Optional
 
 import httpx
@@ -29,6 +31,17 @@ DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
 # A single request has 60 seconds end to end. The model is given a fraction of
 # that so a slow call degrades to "no enrichment" rather than to a failed request.
 REQUEST_TIMEOUT_SECONDS = 20.0
+
+# The model is asked for a short briefing note, not an essay. Output is the
+# expensive half of a call, and an unbounded ceiling only buys the risk of a
+# rambling one.
+MAX_OUTPUT_TOKENS = 700
+
+# Identical requests are answered from memory rather than sent twice. Reviewing
+# one customer repeatedly - which is exactly what happens in a demo, and what an
+# investigator does when returning to a case - otherwise pays full price each
+# time for a byte-identical answer.
+RESPONSE_CACHE_SIZE = 128
 
 
 class GeminiClient:
@@ -49,6 +62,9 @@ class GeminiClient:
         )
         self.timeout = timeout
         self._unavailable_reason: Optional[str] = None
+        self._cache: "OrderedDict[str, Any]" = OrderedDict()
+        self._cache_hits = 0
+        self._calls_made = 0
 
     @property
     def is_configured(self) -> bool:
@@ -62,7 +78,28 @@ class GeminiClient:
             "llm_model": self.llm_model,
             "embedding_model": self.embedding_model,
             "last_error": self._unavailable_reason,
+            "calls_made": self._calls_made,
+            "cache_hits": self._cache_hits,
         }
+
+    def _cached(self, key_source: Dict[str, Any]) -> Optional[Any]:
+        key = hashlib.sha1(
+            json.dumps(key_source, sort_keys=True).encode("utf-8")
+        ).hexdigest()
+        if key in self._cache:
+            self._cache.move_to_end(key)
+            self._cache_hits += 1
+            return self._cache[key]
+        return None
+
+    def _remember(self, key_source: Dict[str, Any], value: Any) -> None:
+        key = hashlib.sha1(
+            json.dumps(key_source, sort_keys=True).encode("utf-8")
+        ).hexdigest()
+        self._cache[key] = value
+        self._cache.move_to_end(key)
+        while len(self._cache) > RESPONSE_CACHE_SIZE:
+            self._cache.popitem(last=False)
 
     async def generate_json(
         self,
@@ -87,10 +124,16 @@ class GeminiClient:
                 "temperature": temperature,
                 "responseMimeType": "application/json",
                 "responseSchema": schema,
+                "maxOutputTokens": MAX_OUTPUT_TOKENS,
             },
         }
         if system_instruction:
             body["systemInstruction"] = {"parts": [{"text": system_instruction}]}
+
+        cache_key = {"model": self.llm_model, "body": body}
+        cached = self._cached(cache_key)
+        if cached is not None:
+            return cached
 
         payload = await self._post(f"{self.llm_model}:generateContent", body)
         if payload is None:
@@ -105,11 +148,14 @@ class GeminiClient:
             return None
 
         try:
-            return json.loads(text)
+            parsed = json.loads(text)
         except json.JSONDecodeError:
             self._unavailable_reason = "model response was not valid JSON"
             log.warning("Gemini returned non-JSON content: %s", text[:300])
             return None
+
+        self._remember(cache_key, parsed)
+        return parsed
 
     async def embed(self, texts: List[str]) -> Optional[List[List[float]]]:
         """
@@ -123,26 +169,44 @@ class GeminiClient:
         if not texts:
             return []
 
-        body = {
-            "requests": [
-                {
-                    "model": f"models/{self.embedding_model}",
-                    "content": {"parts": [{"text": text}]},
-                }
-                for text in texts
-            ]
-        }
+        # Cached per individual text rather than per batch. Payees recur across
+        # customers - the same exchange, the same remittance agent - and the
+        # twelve typologies never change, so most batches are partly or wholly
+        # already known and only the remainder is worth sending.
+        known = {t: self._cached({"embed": self.embedding_model, "text": t}) for t in set(texts)}
+        pending = [t for t, vector in known.items() if vector is None]
 
-        payload = await self._post(f"{self.embedding_model}:batchEmbedContents", body)
-        if payload is None:
-            return None
+        if pending:
+            body = {
+                "requests": [
+                    {
+                        "model": f"models/{self.embedding_model}",
+                        "content": {"parts": [{"text": text}]},
+                    }
+                    for text in pending
+                ]
+            }
 
-        try:
-            return [item["values"] for item in payload["embeddings"]]
-        except (KeyError, TypeError):
-            self._unavailable_reason = "embedding response had an unexpected shape"
-            log.warning("Unexpected embedding response: %s", str(payload)[:300])
-            return None
+            payload = await self._post(f"{self.embedding_model}:batchEmbedContents", body)
+            if payload is None:
+                return None
+
+            try:
+                vectors = [item["values"] for item in payload["embeddings"]]
+            except (KeyError, TypeError):
+                self._unavailable_reason = "embedding response had an unexpected shape"
+                log.warning("Unexpected embedding response: %s", str(payload)[:300])
+                return None
+
+            if len(vectors) != len(pending):
+                self._unavailable_reason = "embedding response length did not match the request"
+                return None
+
+            for text, vector in zip(pending, vectors):
+                self._remember({"embed": self.embedding_model, "text": text}, vector)
+                known[text] = vector
+
+        return [known[t] for t in texts]
 
     async def _post(self, path: str, body: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         """
@@ -153,6 +217,7 @@ class GeminiClient:
         """
         url = f"{API_ROOT}/{path}"
         headers = {"Content-Type": "application/json", "x-goog-api-key": self.api_key}
+        self._calls_made += 1
 
         for attempt in (1, 2):
             try:

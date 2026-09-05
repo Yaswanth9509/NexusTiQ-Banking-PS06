@@ -5,6 +5,8 @@ The load-bearing claim in this system is that the model cannot change a verdict.
 Most of what follows exercises that claim by breaking the model deliberately.
 """
 
+import json
+
 import pytest
 
 from src.ai.client import GeminiClient
@@ -251,3 +253,77 @@ class TestTimeBudget:
         assert report.risk_level == "INVESTIGATE", "the verdict must survive a hanging model"
         assert report.findings
         assert "budget" in report.investigator_narrative["reason"]
+
+
+class TestApiEconomy:
+    """Identical work must not be paid for twice."""
+
+    class Counting(GeminiClient):
+        """Records how many requests would actually leave the machine."""
+
+        def __init__(self, **kw):
+            super().__init__(**kw)
+            self.generate_calls = 0
+            self.embed_calls = 0
+
+        async def _post(self, path, body):
+            if "generateContent" in path:
+                self.generate_calls += 1
+                return {"candidates": [{"content": {"parts": [{"text": json.dumps({
+                    "headline": "Transfers to 'CryptoExchange XYZ'",
+                    "assessment": "Reviewed.",
+                    "where_to_start": ["Call the customer."],
+                    "innocent_explanations": ["They may have set it up."],
+                    "not_established": ["Whether it was authorised."],
+                })}]}}]}
+            self.embed_calls += 1
+            count = len(body["requests"])
+            return {"embeddings": [{"values": [0.1] * 8} for _ in range(count)]}
+
+    def _suspicious(self):
+        return make_history(rows=routine_rows() + [
+            ("2024-05-12", "CryptoExchange XYZ", 2500.00, "Wire", "debit"),
+            ("2024-05-13", "CryptoExchange XYZ", 1500.00, "Wire", "debit"),
+        ])
+
+    def test_reviewing_the_same_customer_twice_costs_one_set_of_calls(self, analyzer):
+        """
+        An investigator returning to a case, or a demo clicking a customer
+        repeatedly, must not re-pay for a byte-identical answer.
+        """
+        client = self.Counting(api_key="test-key")
+        service = InvestigationService(analyzer, client=client, matcher=TypologyMatcher(client))
+        run(service.prepare())
+
+        first = run(service.investigate(self._suspicious()))
+        after_first = (client.generate_calls, client.embed_calls)
+
+        for _ in range(4):
+            repeat = run(service.investigate(self._suspicious()))
+
+        assert (client.generate_calls, client.embed_calls) == after_first, (
+            "repeat reviews issued fresh API calls"
+        )
+        assert client.generate_calls == 1
+        assert repeat.investigator_narrative == first.investigator_narrative
+        assert repeat.risk_score == first.risk_score
+
+    def test_a_payee_seen_before_is_not_embedded_again(self, analyzer):
+        """The same destination recurs across customers; embed it once."""
+        client = self.Counting(api_key="test-key")
+        matcher = TypologyMatcher(client)
+        run(matcher.prepare())
+
+        run(matcher.match([{"payee": "CryptoExchange XYZ", "description": "Wire"}]))
+        calls_after_first = client.embed_calls
+
+        run(matcher.match([{"payee": "CryptoExchange XYZ", "description": "Wire"}]))
+        assert client.embed_calls == calls_after_first
+
+        # A destination never seen before still costs a call.
+        run(matcher.match([{"payee": "Brand New Payee", "description": "Wire"}]))
+        assert client.embed_calls == calls_after_first + 1
+
+    def test_output_length_is_capped(self):
+        from src.ai.client import MAX_OUTPUT_TOKENS
+        assert MAX_OUTPUT_TOKENS <= 1000, "an unbounded reply is the expensive half of a call"
