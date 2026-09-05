@@ -88,6 +88,15 @@ observation, `PATTERN_BREAK` is withheld — it compares a customer against thei
 own past, and there is not yet a past to compare to — and the large-transfer
 threshold loosens from 2.5x to 3.5x.
 
+### What comes back
+
+`risk_level` is one of **ROUTINE**, **INVESTIGATE** or **ESCALATE**. The top band
+is named in the field itself rather than left for a caller to work out by
+comparing the score against a threshold — three independent rules firing on one
+customer is a different instruction to a fraud desk than one. A history too thin
+to judge returns ROUTINE with the reason stated and a low confidence, because
+"we cannot tell" is not the same claim as "nothing is wrong".
+
 ### Grounding
 
 - Every finding carries the identifiers of the transactions it rests on, and

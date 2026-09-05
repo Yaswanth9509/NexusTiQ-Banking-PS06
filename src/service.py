@@ -12,7 +12,9 @@ AI layer can raise, lower or invent a finding, so a model that is slow, absent,
 rate-limited or wrong changes how the report reads and never what it says.
 """
 
+import asyncio
 import logging
+import time
 from typing import Any, Dict, List, Optional
 
 from src.ai.narrator import generate_narrative
@@ -25,6 +27,13 @@ log = logging.getLogger(__name__)
 
 class InvestigationService:
     """Runs an investigation end to end."""
+
+    # A request has 60 seconds end to end. Enrichment makes two sequential model
+    # calls, each of which retries once, so its own timeouts alone could reach
+    # eighty. The whole enrichment phase is therefore capped here rather than
+    # relying on the individual calls to stay inside the budget between them:
+    # a slow model must cost the report its briefing note, never its response.
+    ENRICHMENT_BUDGET_SECONDS = 25.0
 
     def __init__(
         self,
@@ -64,9 +73,44 @@ class InvestigationService:
             return report
 
         profile = self.analyzer.build_customer_profile(history)
+        started = time.monotonic()
 
-        destinations = self._destinations_under_review(history.transactions, report.findings)
         typology_notes: List[Dict[str, Any]] = []
+        narrative: Dict[str, Any] = {"available": False, "reason": "no model configured"}
+
+        try:
+            typology_notes, narrative = await asyncio.wait_for(
+                self._enrich(history, profile, report.findings),
+                timeout=self.ENRICHMENT_BUDGET_SECONDS,
+            )
+        except asyncio.TimeoutError:
+            log.warning(
+                "Enrichment exceeded its %.0fs budget for %s; returning the rules' verdict alone",
+                self.ENRICHMENT_BUDGET_SECONDS, history.customer_id,
+            )
+            narrative = {
+                "available": False,
+                "reason": f"enrichment exceeded its {self.ENRICHMENT_BUDGET_SECONDS:.0f}s budget",
+            }
+
+        report.destination_context = typology_notes or None
+        report.investigator_narrative = narrative
+        report.ai_status = self._status(
+            used=bool(narrative.get("available")) or bool(typology_notes),
+            reason=narrative.get("reason"),
+            elapsed=time.monotonic() - started,
+        )
+        return report
+
+    async def _enrich(self, history, profile, findings):
+        """
+        The enrichment phase, run under a single overall deadline.
+
+        Each step is independently guarded, so the narrative can still be
+        produced when typology matching fails and vice versa.
+        """
+        typology_notes: List[Dict[str, Any]] = []
+        destinations = self._destinations_under_review(history.transactions, findings)
         if self.matcher is not None and destinations:
             try:
                 typology_notes = await self.matcher.match(destinations)
@@ -81,20 +125,14 @@ class InvestigationService:
                     client=self.client,
                     customer_id=history.customer_id,
                     profile=profile,
-                    findings=report.findings,
+                    findings=findings,
                     typology_notes=typology_notes,
                 )
             except Exception:
                 log.exception("Narrative generation failed; continuing without it")
                 narrative = {"available": False, "reason": "narrative generation raised"}
 
-        report.destination_context = typology_notes or None
-        report.investigator_narrative = narrative
-        report.ai_status = self._status(
-            used=bool(narrative.get("available")) or bool(typology_notes),
-            reason=narrative.get("reason"),
-        )
-        return report
+        return typology_notes, narrative
 
     def _destinations_under_review(
         self, transactions: List[Transaction], findings: List[Finding]
@@ -113,12 +151,16 @@ class InvestigationService:
                 by_payee[txn.payee] = txn.description or ""
         return [{"payee": payee, "description": desc} for payee, desc in by_payee.items()]
 
-    def _status(self, used: bool, reason: Optional[str] = None) -> Dict[str, Any]:
+    def _status(
+        self, used: bool, reason: Optional[str] = None, elapsed: Optional[float] = None
+    ) -> Dict[str, Any]:
         status: Dict[str, Any] = {
             "enrichment_applied": used,
             "typology_route": self.typology_route,
             "model_configured": bool(self.client and self.client.is_configured),
         }
+        if elapsed is not None:
+            status["enrichment_seconds"] = round(elapsed, 2)
         if self.client is not None:
             status["llm_model"] = self.client.llm_model
             status["embedding_model"] = self.client.embedding_model

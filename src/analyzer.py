@@ -19,6 +19,10 @@ class TransactionAnalyzer:
     # The heaviest weight any single rule carries; used to normalise scoring.
     MAX_RULE_WEIGHT = 0.40
 
+    # At or above this score the report is escalated rather than merely flagged.
+    # Only three or more independent findings can reach it.
+    ESCALATION_THRESHOLD = 0.80
+
     def __init__(self, risk_rules: List[RiskRule]):
         self.risk_rules = risk_rules
 
@@ -69,15 +73,27 @@ class TransactionAnalyzer:
 
         # Step 5: Generate report
         if findings:
-            if risk_score >= 0.80:
-                recommendation = "ESCALATE - Multiple rule triggers. Immediate investigator review required."
+            # The top band is named in risk_level itself rather than left for a
+            # caller to infer by comparing the score against a threshold or
+            # reading the recommendation prose. Three independent rules firing on
+            # one customer is a different instruction to a fraud desk than one.
+            if risk_score >= self.ESCALATION_THRESHOLD:
+                risk_level = "ESCALATE"
+                recommendation = (
+                    "ESCALATE - several independent signals on the same customer. "
+                    "Put this in front of an investigator now."
+                )
                 analysis_confidence = 0.95
             else:
-                recommendation = "INVESTIGATE - One or more signals detected. Review recommended."
+                risk_level = "INVESTIGATE"
+                recommendation = (
+                    "INVESTIGATE - one or more signals worth a closer look. "
+                    "Review when the queue allows."
+                )
                 analysis_confidence = 0.70
 
             report = InvestigationReport(
-                risk_level="INVESTIGATE",
+                risk_level=risk_level,
                 risk_score=risk_score,
                 summary=f"Detected {len(findings)} risk signal(s) - {', '.join([f.rule_triggered for f in findings])}",
                 findings=findings,

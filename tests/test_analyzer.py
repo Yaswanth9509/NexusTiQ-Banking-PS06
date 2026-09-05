@@ -106,6 +106,23 @@ class TestRiskScoring:
         assert one_heavy < two <= 0.75
         assert two < three <= 1.0
 
+    def test_the_top_band_is_named_in_risk_level(self, analyzer, histories):
+        """
+        A caller must not have to compare floats or read prose to learn that a
+        customer was escalated. CUST_009 trips three independent rules.
+        """
+        report = run(analyzer.analyze(histories["CUST_009"]))
+
+        assert report.risk_level == "ESCALATE"
+        assert len(report.findings) >= 3
+        assert report.risk_score >= 0.80
+
+    def test_one_or_two_findings_stay_at_investigate(self, analyzer, histories):
+        for customer_id in ("CUST_004", "CUST_003"):
+            report = run(analyzer.analyze(histories[customer_id]))
+            assert report.risk_level == "INVESTIGATE", customer_id
+            assert report.risk_score < 0.80, customer_id
+
     def test_three_findings_reach_the_escalation_threshold(self, analyzer):
         from src.models import Finding
 

@@ -85,7 +85,7 @@ class Finding(BaseModel):
 
 class InvestigationReport(BaseModel):
     """Final output report to investigator"""
-    risk_level: str
+    risk_level: str          # "ROUTINE", "INVESTIGATE" or "ESCALATE"
     risk_score: float
     summary: str
     findings: Optional[List[Finding]] = None

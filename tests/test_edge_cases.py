@@ -218,3 +218,36 @@ class TestTypologyMatching:
         matcher = TypologyMatcher(GeminiClient(api_key=""))
         route = run(matcher.prepare())
         assert "keyword" in route
+
+
+class TestTimeBudget:
+    """A slow model must cost the briefing note, never the response."""
+
+    def test_a_hanging_model_cannot_blow_the_request_budget(self, analyzer):
+        import asyncio
+        import time
+
+        class Hanging(GeminiClient):
+            async def generate_json(self, *a, **k):
+                await asyncio.sleep(120)
+
+            async def embed(self, *a, **k):
+                await asyncio.sleep(120)
+
+        client = Hanging(api_key="test-key")
+        service = InvestigationService(analyzer, client=client, matcher=TypologyMatcher(client))
+        service.ENRICHMENT_BUDGET_SECONDS = 1.0
+
+        history = make_history(rows=routine_rows() + [
+            ("2024-05-12", "CryptoExchange XYZ", 2500.00, "Wire", "debit"),
+            ("2024-05-13", "CryptoExchange XYZ", 1500.00, "Wire", "debit"),
+        ])
+
+        started = time.monotonic()
+        report = run(service.investigate(history))
+        elapsed = time.monotonic() - started
+
+        assert elapsed < 5, f"enrichment was not bounded: took {elapsed:.1f}s"
+        assert report.risk_level == "INVESTIGATE", "the verdict must survive a hanging model"
+        assert report.findings
+        assert "budget" in report.investigator_narrative["reason"]

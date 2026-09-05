@@ -194,10 +194,14 @@ async function investigate(id) {
 }
 
 function verdictLabel(rep) {
-  if (rep.risk_level === "ROUTINE") {
-    return (rep.customer_context && rep.customer_context.maturity === undefined) ? "INSUFFICIENT" : "ROUTINE";
+  // risk_level carries the tier directly. The one distinction it does not draw
+  // is between a clean history and one too thin to judge, and a report on a
+  // thin history is the only one that omits the maturity from its context.
+  if (rep.risk_level === "ROUTINE" &&
+      rep.customer_context && rep.customer_context.maturity === undefined) {
+    return "INSUFFICIENT";
   }
-  return rep.risk_score >= 0.80 ? "ESCALATE" : "INVESTIGATE";
+  return rep.risk_level;
 }
 
 function render(rep, hist) {
