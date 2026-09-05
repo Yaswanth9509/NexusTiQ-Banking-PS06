@@ -22,28 +22,103 @@ judgement to the investigator.
 
 ## Running it
 
+Python 3.11 or newer is the only prerequisite. No Node, no database, no
+container, no build step.
+
 ```bash
+git clone https://github.com/Yaswanth9509/NexusTiQ-Banking-PS06.git
+cd NexusTiQ-Banking-PS06
 pip install -r requirements.txt
 python app.py
 ```
 
-Then open **http://localhost:8000**.
+Then open **http://localhost:8000**. Startup takes about a second and prints:
 
-The Gemini API key is optional for the application to run. Without it the rules,
-the findings, the scores and the interface all work; the AI enrichment reports
-itself as unavailable and the system falls back to offline destination matching.
-With it, set:
-
-```bash
-export GEMINI_API_KEY=your-key        # Windows: set GEMINI_API_KEY=your-key
+```
+Loaded 20 customer histories
+Typology matching route: embeddings (cached index)
+Ready on port 8000
 ```
 
-`.env` is also read if present — see `.env.example`. No key is committed.
+That is the whole application - API and interface in one process on one port.
+There is no second command, no separate frontend server, and nothing that waits
+for input.
+
+### The API key is optional
+
+The application runs without one, and everything you need in order to judge it
+works either way: the rules, the findings, the scores, the traceability and the
+interface. Supply a key and each flagged customer additionally gets an
+AI-written investigator briefing and embedding-based destination matching.
+Without one, the AI section says plainly that it is unavailable and destination
+matching falls back to keyword anchors drawn from the same document. `GET
+/health` reports which mode is active, so nothing degrades silently.
 
 ```bash
-python -m pytest tests/ -q            # 52 tests
-python -c "from src.data_generator import generate_sample_customers"  # regenerate data
+export GEMINI_API_KEY=your-key        # macOS/Linux
+set GEMINI_API_KEY=your-key           # Windows cmd
+$env:GEMINI_API_KEY='your-key'        # PowerShell
 ```
+
+A `.env` file at the root is read if present - see `.env.example`. No key is
+committed anywhere in this repository.
+
+### What to look at first
+
+The left panel lists twenty customers. Four are worth going to directly:
+
+| | | |
+|---|---|---|
+| **CUST_001** | ROUTINE | Sixty transactions including a $1,450 monthly mortgage, nothing flagged. Most customers should look like this. |
+| **CUST_005** | ROUTINE | The harder case. This customer wires $5,000 to a brokerage *every month* - three times larger than anything else they do - and it is correctly left alone. Flagging it would be the same failure as missing a real one. |
+| **CUST_003** | INVESTIGATE 0.73 | Three wires to a cryptocurrency exchange in three days. |
+| **CUST_009** | ESCALATE 0.93 | Three rules fire at once. Read the "How these findings connect" panel: all three rest on the same three transfers, so it is one episode rather than three problems. |
+
+**Click any transaction ID inside a finding.** It expands to show that exact row
+from the source history. Every figure in every report can be traced this way,
+and because the identifiers live in the committed data you can equally just
+search `data/sample_customers.json` for any ID you see on screen.
+
+### Checking it from the command line
+
+```bash
+curl http://localhost:8000/health
+curl http://localhost:8000/api/customers
+curl -X POST "http://localhost:8000/api/investigate?customer_id=CUST_009"
+curl -X POST "http://localhost:8000/api/investigate?customer_id=CUST_001"
+```
+
+Interactive API documentation is at `http://localhost:8000/docs`.
+
+To see the deterministic half on its own, with no model involved:
+
+```bash
+curl -X POST "http://localhost:8000/api/investigate?customer_id=CUST_009&enrich=false"
+```
+
+The verdict, score, findings and citations come back identical.
+
+### Tests
+
+```bash
+python -m pytest tests/ -q            # 72 tests, about two seconds
+```
+
+Roughly half the rule tests assert that nothing is flagged - rent, a standing
+investment transfer, a large incoming payment, a settled weekly routine. Each
+was a false positive at some point and now has a test holding it shut.
+
+To regenerate the sample data from its seed:
+
+```bash
+python -c "import sys; sys.path.insert(0,'.'); from src.data_generator import generate_sample_customers as g; import json; print(len(g()))"
+```
+
+### If something goes wrong
+
+- **Port 8000 in use** - stop whatever holds it, or run with `PORT=8080` and open that instead.
+- **`ModuleNotFoundError`** - the install did not finish; re-run `pip install -r requirements.txt` and read its output.
+- **AI briefing says unavailable** - expected without a key, and not a failure. Everything else is unaffected.
 
 ---
 
